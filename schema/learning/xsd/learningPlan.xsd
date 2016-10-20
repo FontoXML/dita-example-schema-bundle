@@ -143,7 +143,7 @@ It must be declared in topic-type shells.
 </xs:documentation>
       </xs:annotation>
       <xs:choice>
-         <xs:element ref="no-topic-nesting" maxOccurs="0" minOccurs="0"/>
+         <xs:element ref="no-topic-nesting"/>
       </xs:choice>
    </xs:group>
 
