@@ -21,16 +21,11 @@
 				"urn:oasis:names:tc:dita:xsd:ditabase.xsd"
 			]
 		},
-		"schema/technicalContent/xsd/glossary.xsd": {
-			"packageName": "dita-standard-sx-shells-glossary",
-			"locations": [
-				"urn:oasis:names:tc:dita:xsd:glossary.xsd:1.3",
-				"urn:oasis:names:tc:dita:xsd:glossary.xsd"
-			]
-		},
 		"schema/technicalContent/xsd/glossentry.xsd": {
 			"packageName": "dita-standard-sx-shells-glossentry",
 			"locations": [
+				"urn:oasis:names:tc:dita:xsd:glossary.xsd:1.3",
+				"urn:oasis:names:tc:dita:xsd:glossary.xsd",
 				"urn:oasis:names:tc:dita:xsd:glossentry.xsd:1.3",
 				"urn:oasis:names:tc:dita:xsd:glossentry.xsd"
 			]
