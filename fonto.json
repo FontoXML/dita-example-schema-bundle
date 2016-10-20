@@ -170,5 +170,8 @@
 				"urn:oasis:names:tc:dita:spec:classification:xsd:subjectScheme.xsd"
 			]
 		}
+	},
+	"compilerFlags":{
+		"strictMode": false
 	}
 }
