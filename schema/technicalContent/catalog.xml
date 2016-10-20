@@ -155,6 +155,13 @@
               uri="xsd/xmlDomain.xsd"/>
       <system systemId="urn:oasis:names:tc:dita:xsd:xmlDomain.xsd"
               uri="xsd/xmlDomain.xsd"/>
+      <system systemId="ditabaseMod.xsd" uri="ditabaseMod.xsd"/>
+      <system systemId="urn:oasis:names:tc:dita:xsd:ditabaseMod.xsd"
+              uri="xsd/ditabaseMod.xsd"/>
+      <system systemId="urn:oasis:names:tc:dita:xsd:ditabaseMod.xsd:1.x"
+              uri="xsd/ditabaseMod.xsd"/>
+      <system systemId="urn:oasis:names:tc:dita:xsd:ditabaseMod.xsd:1.2"
+              uri="xsd/ditabaseMod.xsd"/>
    </group>
    <group><!-- Public ID (URN) catalog entries -->
       <uri name="urn:oasis:names:tc:dita:xsd:abbreviateDomain.xsd:1.3"
@@ -303,12 +310,12 @@
            uri="xsd/xmlDomain.xsd"/>
       <uri name="urn:oasis:names:tc:dita:xsd:xmlDomain.xsd"
            uri="xsd/xmlDomain.xsd"/>
-      <system systemId="ditabaseMod.xsd" uri="ditabaseMod.xsd"/>
-      <system systemId="urn:oasis:names:tc:dita:xsd:ditabaseMod.xsd"
+      <uri name="ditabaseMod.xsd" uri="ditabaseMod.xsd"/>
+      <uri name="urn:oasis:names:tc:dita:xsd:ditabaseMod.xsd"
               uri="xsd/ditabaseMod.xsd"/>
-      <system systemId="urn:oasis:names:tc:dita:xsd:ditabaseMod.xsd:1.x"
+      <uri name="urn:oasis:names:tc:dita:xsd:ditabaseMod.xsd:1.x"
               uri="xsd/ditabaseMod.xsd"/>
-      <system systemId="urn:oasis:names:tc:dita:xsd:ditabaseMod.xsd:1.2"
+      <uri name="urn:oasis:names:tc:dita:xsd:ditabaseMod.xsd:1.2"
               uri="xsd/ditabaseMod.xsd"/>
    </group>
 </catalog>
