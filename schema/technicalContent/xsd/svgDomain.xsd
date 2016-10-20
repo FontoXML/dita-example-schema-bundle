@@ -6,8 +6,6 @@
 <!--                                                             -->
 <xs:schema xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/"
            xmlns:xs="http://www.w3.org/2001/XMLSchema">
-   <xs:import schemaLocation="svg/svg11/svg11.xsd"
-              namespace="http://www.w3.org/2000/svg"/>
    <xs:annotation>
       <xs:appinfo>
          <dita:domainsModule xmlns:dita="http://dita.oasis-open.org/architecture/2005/">(topic svg-d)</dita:domainsModule>
@@ -54,7 +52,7 @@
    <xs:group name="svg-container.content">
       <xs:sequence>
          <xs:choice minOccurs="0" maxOccurs="unbounded">
-            <xs:element xmlns:svg="http://www.w3.org/2000/svg" ref="svg:svg"/>
+            <xs:any namespace="http://www.w3.org/2000/svg" processContents="skip"/>
             <xs:group ref="svgref"/>
             <xs:group ref="data"/>
             <xs:group ref="data-about"/>
