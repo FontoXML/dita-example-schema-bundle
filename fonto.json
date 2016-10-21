@@ -30,6 +30,13 @@
 				"urn:oasis:names:tc:dita:xsd:glossentry.xsd"
 			]
 		},
+		"schema/technicalContent/xsd/glossgroup.xsd": {
+			"packageName": "dita-standard-sx-shells-glossgroup",
+			"locations": [
+				"urn:oasis:names:tc:dita:xsd:glossgroup.xsd:1.3",
+				"urn:oasis:names:tc:dita:xsd:glossgroup.xsd"
+			]
+		},
 		"schema/learning/xsd/learningAssessment.xsd": {
 			"packageName": "dita-standard-sx-shells-learning-assessment",
 			"locations": [
