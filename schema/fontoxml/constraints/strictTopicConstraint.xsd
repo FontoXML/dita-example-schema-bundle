@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:import namespace="http://dita.oasis-open.org/architecture/2005/" schemaLocation="urn:oasis:names:tc:dita:xsd:ditaarch.xsd:1.3"/>
+	
+	<xs:annotation>
+		<xs:appinfo>
+			<dita:domainsModule xmlns:dita="http://dita.oasis-open.org/architecture/2005/">(fontoxml strictTopic-c)</dita:domainsModule>
+		</xs:appinfo>
+	</xs:annotation>
+
+	<xs:redefine schemaLocation="urn:oasis:names:tc:dita:xsd:topicMod.xsd:1.3">
+		
+		<xs:group name="topic-info-types">
+			<xs:choice>
+				<xs:group ref="topic"/>
+				<xs:group ref="info-types"/>
+			</xs:choice>
+		</xs:group>
+		
+		<!-- Remove unused elements -->
+		<xs:group name="abstract.cnt">
+			<xs:sequence>
+				<xs:choice>
+					<xs:group ref="basic.block"/>
+					<!--<xs:group ref="basic.ph"/>-->
+					<xs:group ref="data.elements.incl"/>
+					<xs:group ref="foreign.unknown.incl"/>
+					<xs:group ref="shortdesc"/>
+					<!--<xs:group ref="txt.incl"/>-->
+				</xs:choice>
+			</xs:sequence>
+		</xs:group>
+		
+		<!-- Remove unused elements -->
+		<xs:group name="body.cnt">
+			<xs:sequence>
+				<xs:choice>
+					<xs:group ref="basic.block"/>
+					<xs:group ref="data.elements.incl"/>
+					<!--<xs:group ref="draft-comment"/>-->
+					<xs:group ref="foreign.unknown.incl"/>
+					<!--<xs:group ref="required-cleanup"/>-->
+				</xs:choice>
+			</xs:sequence>
+		</xs:group>
+		
+		<!-- Remove unused elements -->
+		<xs:group name="bodydiv.cnt">
+			<xs:sequence>
+				<xs:choice>
+					<xs:group ref="basic.block"/>
+					<!--<xs:group ref="basic.ph"/>-->
+					<xs:group ref="data.elements.incl"/>
+					<xs:group ref="foreign.unknown.incl"/>
+					<!--<xs:group ref="txt.incl"/>-->
+				</xs:choice>
+			</xs:sequence>
+		</xs:group>
+		
+		<!-- Remove unused elements -->
+		<xs:group name="example.cnt">
+			<xs:sequence>
+				<xs:choice>
+					<xs:group ref="basic.block"/>
+					<!--<xs:group ref="basic.ph"/>-->
+					<xs:group ref="data.elements.incl"/>
+					<xs:group ref="foreign.unknown.incl"/>
+					<xs:group ref="title"/>
+					<!--<xs:group ref="txt.incl"/>-->
+				</xs:choice>
+			</xs:sequence>
+		</xs:group>
+		
+		<!-- Remove unused elements -->
+		<xs:group name="section.cnt">
+			<xs:sequence>
+				<xs:choice>
+					<xs:group ref="basic.block"/>
+					<!--<xs:group ref="basic.ph"/>-->
+					<xs:group ref="data.elements.incl"/>
+					<xs:group ref="foreign.unknown.incl"/>
+					<xs:group ref="sectiondiv"/>
+					<xs:group ref="title"/>
+					<!--<xs:group ref="txt.incl"/>-->
+				</xs:choice>
+			</xs:sequence>
+		</xs:group>
+		
+		<!-- Remove unused elements -->
+		<xs:group name="section.notitle.cnt">
+			<xs:sequence>
+				<xs:choice>
+					<xs:group ref="basic.block"/>
+					<!--<xs:group ref="basic.ph"/>-->
+					<xs:group ref="data.elements.incl"/>
+					<xs:group ref="foreign.unknown.incl"/>
+					<xs:group ref="sectiondiv"/>
+					<!--<xs:group ref="txt.incl"/>-->
+				</xs:choice>
+			</xs:sequence>
+		</xs:group>
+		
+		<!-- Remove unused elements -->
+		<xs:group name="sectiondiv.cnt">
+			<xs:sequence>
+				<xs:choice>
+					<xs:group ref="basic.block"/>
+					<!--<xs:group ref="basic.ph"/>-->
+					<xs:group ref="data.elements.incl"/>
+					<xs:group ref="foreign.unknown.incl"/>
+					<!--<xs:group ref="txt.incl"/>-->
+				</xs:choice>
+			</xs:sequence>
+		</xs:group>
+		
+		<!-- No longer mixed -->
+		<xs:complexType name="abstract.class">
+			<xs:complexContent>
+				<xs:restriction base="abstract.class">
+					<xs:sequence>
+						<xs:group ref="abstract.content"/>
+					</xs:sequence>
+					<xs:attributeGroup ref="abstract.attributes"/>
+				</xs:restriction>
+			</xs:complexContent>
+		</xs:complexType>
+		
+		<!-- No longer mixed -->
+		<xs:complexType name="bodydiv.class">
+			<xs:complexContent>
+				<xs:restriction base="bodydiv.class">
+					<xs:sequence>
+						<xs:group ref="bodydiv.content"/>
+					</xs:sequence>
+					<xs:attributeGroup ref="bodydiv.attributes"/>
+				</xs:restriction>
+			</xs:complexContent>
+		</xs:complexType>
+		
+		<!-- No longer mixed -->
+		<xs:complexType name="section.class">
+			<xs:complexContent>
+				<xs:restriction base="section.class">
+					<xs:sequence>
+						<xs:group ref="section.content"/>
+					</xs:sequence>
+					<xs:attributeGroup ref="section.attributes"/>
+				</xs:restriction>
+			</xs:complexContent>
+		</xs:complexType>
+		
+		<!-- No longer mixed -->
+		<xs:complexType name="sectiondiv.class">
+			<xs:complexContent>
+				<xs:restriction base="sectiondiv.class">
+					<xs:sequence>
+						<xs:group ref="sectiondiv.content"/>
+					</xs:sequence>
+					<xs:attributeGroup ref="sectiondiv.attributes"/>
+				</xs:restriction>
+			</xs:complexContent>
+		</xs:complexType>
+		
+		<!-- No longer mixed -->
+		<xs:complexType name="example.class">
+			<xs:complexContent>
+				<xs:restriction base="example.class">
+					<xs:sequence>
+						<xs:group ref="example.content"/>
+					</xs:sequence>
+					<xs:attributeGroup ref="example.attributes"/>
+				</xs:restriction>
+			</xs:complexContent>
+		</xs:complexType>
+		
+		<!-- No longer mixed -->
+		<xs:complexType name="linkinfo.class">
+			<xs:complexContent>
+				<xs:restriction base="linkinfo.class">
+					<xs:sequence>
+						<xs:group ref="linkinfo.content"/>
+					</xs:sequence>
+					<xs:attributeGroup ref="linkinfo.attributes"/>
+				</xs:restriction>
+			</xs:complexContent>
+		</xs:complexType>
+
+	</xs:redefine>
+
+</xs:schema>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:import namespace="http://dita.oasis-open.org/architecture/2005/" schemaLocation="urn:oasis:names:tc:dita:xsd:ditaarch.xsd:1.3"/>
+	
+	<xs:annotation>
+		<xs:appinfo>
+			<dita:domainsModule xmlns:dita="http://dita.oasis-open.org/architecture/2005/">(fontoxml strictLearningDomain-c)</dita:domainsModule>
+		</xs:appinfo>
+	</xs:annotation>
+
+	<xs:redefine schemaLocation="urn:oasis:names:tc:dita:spec:learning:xsd:learningDomain.xsd:1.3">
+		
+		<!-- No longer mixed -->
+		<xs:complexType name="lcInstructornote.class">
+			<xs:complexContent>
+				<xs:restriction base="lcInstructornote.class">
+					<xs:sequence>
+						<xs:group ref="lcInstructornote.content"/>
+					</xs:sequence>
+					<xs:attributeGroup ref="lcInstructornote.attributes"/>
+				</xs:restriction>
+			</xs:complexContent>
+		</xs:complexType>
+
+	</xs:redefine>
+
+</xs:schema>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:import namespace="http://dita.oasis-open.org/architecture/2005/" schemaLocation="urn:oasis:names:tc:dita:xsd:ditaarch.xsd:1.3"/>
+
+	<xs:annotation>
+		<xs:appinfo>
+			<dita:domainsModule xmlns:dita="http://dita.oasis-open.org/architecture/2005/">(fontoxml strictCommonElement-c)</dita:domainsModule>
+		</xs:appinfo>
+	</xs:annotation>
+
+	<xs:redefine schemaLocation="urn:fontoxml:names:tc:dita:xsd:strictCommonElementConstraintInt.xsd:1.3">
+
+		<!-- Only allow our strict-p.content group -->
+		<xs:group name="p.content">
+			<xs:choice>
+				<xs:group ref="strict-p.content"/>
+			</xs:choice>
+		</xs:group>
+
+	</xs:redefine>
+
+</xs:schema>

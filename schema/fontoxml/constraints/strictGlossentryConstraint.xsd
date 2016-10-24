@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:import namespace="http://dita.oasis-open.org/architecture/2005/" schemaLocation="urn:oasis:names:tc:dita:xsd:ditaarch.xsd:1.3"/>
+	
+	<xs:annotation>
+		<xs:appinfo>
+			<dita:domainsModule xmlns:dita="http://dita.oasis-open.org/architecture/2005/">(fontoxml strictGlossentry-c)</dita:domainsModule>
+		</xs:appinfo>
+	</xs:annotation>
+
+	<xs:redefine schemaLocation="urn:oasis:names:tc:dita:xsd:glossentryMod.xsd:1.3">
+		
+		<xs:group name="glossentry-info-types">
+			<xs:sequence>
+				<xs:choice>
+					<xs:group ref="no-topic-nesting"/>
+					<xs:group ref="info-types"/>
+				</xs:choice>
+			</xs:sequence>
+		</xs:group>
+		
+		<!-- No longer mixed -->
+		<xs:complexType name="glossdef.class">
+			<xs:complexContent>
+				<xs:restriction base="glossdef.class">
+					<xs:sequence>
+						<xs:group ref="glossdef.content"/>
+					</xs:sequence>
+					<xs:attributeGroup ref="glossdef.attributes"/>
+				</xs:restriction>
+			</xs:complexContent>
+		</xs:complexType>
+		
+		<!-- No longer mixed -->
+		<xs:complexType name="glossUsage.class">
+			<xs:complexContent>
+				<xs:restriction base="glossUsage.class">
+					<xs:sequence>
+						<xs:group ref="glossUsage.content"/>
+					</xs:sequence>
+					<xs:attributeGroup ref="glossUsage.attributes"/>
+				</xs:restriction>
+			</xs:complexContent>
+		</xs:complexType>
+		
+		<!-- No longer mixed -->
+		<xs:complexType name="glossScopeNote.class">
+			<xs:complexContent>
+				<xs:restriction base="glossScopeNote.class">
+					<xs:sequence>
+						<xs:group ref="glossScopeNote.content"/>
+					</xs:sequence>
+					<xs:attributeGroup ref="glossScopeNote.attributes"/>
+				</xs:restriction>
+			</xs:complexContent>
+		</xs:complexType>
+
+	</xs:redefine>
+
+</xs:schema>

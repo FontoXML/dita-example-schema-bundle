@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:import namespace="http://dita.oasis-open.org/architecture/2005/" schemaLocation="urn:oasis:names:tc:dita:xsd:ditaarch.xsd:1.3"/>
+	
+	<xs:annotation>
+		<xs:appinfo>
+			<dita:domainsModule xmlns:dita="http://dita.oasis-open.org/architecture/2005/">(fontoxml strictTroubleshooting-c)</dita:domainsModule>
+		</xs:appinfo>
+	</xs:annotation>
+
+	<xs:redefine schemaLocation="urn:oasis:names:tc:dita:xsd:troubleshootingMod.xsd:1.3">
+		
+		<xs:group name="troubleshooting-info-types">
+			<xs:choice>
+				<xs:group ref="troubleshooting"/>
+				<xs:group ref="info-types"/>
+			</xs:choice>
+		</xs:group>
+		
+		<!-- Remove unused elements -->
+		<xs:group name="section.blocks.only.cnt">
+			<xs:sequence>
+				<xs:group ref="title" minOccurs="0"/>
+				<xs:choice minOccurs="0" maxOccurs="unbounded">
+					<xs:group ref="basic.block"/>
+					<xs:group ref="data.elements.incl"/>
+					<xs:group ref="foreign.unknown.incl"/>
+					<xs:group ref="sectiondiv"/>
+					<!--<xs:group ref="txt.incl"/>-->
+				</xs:choice>
+			</xs:sequence>
+		</xs:group>
+
+	</xs:redefine>
+
+</xs:schema>

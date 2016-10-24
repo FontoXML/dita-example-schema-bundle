@@ -155,7 +155,7 @@
               uri="xsd/xmlDomain.xsd"/>
       <system systemId="urn:oasis:names:tc:dita:xsd:xmlDomain.xsd"
               uri="xsd/xmlDomain.xsd"/>
-      <system systemId="ditabaseMod.xsd" uri="ditabaseMod.xsd"/>
+      <system systemId="ditabaseMod.xsd" uri="xsd/ditabaseMod.xsd"/>
       <system systemId="urn:oasis:names:tc:dita:xsd:ditabaseMod.xsd"
               uri="xsd/ditabaseMod.xsd"/>
       <system systemId="urn:oasis:names:tc:dita:xsd:ditabaseMod.xsd:1.x"
@@ -310,7 +310,7 @@
            uri="xsd/xmlDomain.xsd"/>
       <uri name="urn:oasis:names:tc:dita:xsd:xmlDomain.xsd"
            uri="xsd/xmlDomain.xsd"/>
-      <uri name="ditabaseMod.xsd" uri="ditabaseMod.xsd"/>
+      <uri name="ditabaseMod.xsd" uri="xsd/ditabaseMod.xsd"/>
       <uri name="urn:oasis:names:tc:dita:xsd:ditabaseMod.xsd"
               uri="xsd/ditabaseMod.xsd"/>
       <uri name="urn:oasis:names:tc:dita:xsd:ditabaseMod.xsd:1.x"

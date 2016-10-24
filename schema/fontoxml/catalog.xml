@@ -1,140 +1,212 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
 
-   <group xml:base="shells/">
-      <system systemId="basemap.xsd" uri="basemap.xsd"/>
-      <system systemId="urn:fontoxml:names:tc:dita:xsd:basemap.xsd:1.3" uri="basemap.xsd"/>
-      <uri name="basemap.xsd" uri="basemap.xsd"/>
-      <uri name="urn:fontoxml:names:tc:dita:xsd:basemap.xsd:1.3" uri="basemap.xsd"/>
-      
-      <system systemId="basetopic.xsd" uri="basetopic.xsd"/>
-      <system systemId="urn:fontoxml:names:tc:dita:xsd:basetopic.xsd:1.3" uri="basetopic.xsd"/>
-      <uri name="basetopic.xsd" uri="basetopic.xsd"/>
-      <uri name="urn:fontoxml:names:tc:dita:xsd:basetopic.xsd:1.3" uri="basetopic.xsd"/>
-      
-      <system systemId="bookmap.xsd" uri="bookmap.xsd"/>
-      <system systemId="urn:fontoxml:names:tc:dita:xsd:bookmap.xsd:1.3" uri="bookmap.xsd"/>
-      <uri name="bookmap.xsd" uri="bookmap.xsd"/>
-      <uri name="urn:fontoxml:names:tc:dita:xsd:bookmap.xsd:1.3" uri="bookmap.xsd"/>
-      
-      <system systemId="classifyMap.xsd" uri="classifyMap.xsd"/>
-      <system systemId="urn:fontoxml:names:tc:dita:xsd:classifyMap.xsd:1.3" uri="classifyMap.xsd"/>
-      <uri name="classifyMap.xsd" uri="classifyMap.xsd"/>
-      <uri name="urn:fontoxml:names:tc:dita:xsd:classifyMap.xsd:1.3" uri="classifyMap.xsd"/>
-      
-      <system systemId="concept.xsd" uri="concept.xsd"/>
-      <system systemId="urn:fontoxml:names:tc:dita:xsd:concept.xsd:1.3" uri="concept.xsd"/>
-      <uri name="concept.xsd" uri="concept.xsd"/>
-      <uri name="urn:fontoxml:names:tc:dita:xsd:concept.xsd:1.3" uri="concept.xsd"/>
-      
-      <system systemId="ditabase.xsd" uri="ditabase.xsd"/>
-      <system systemId="urn:fontoxml:names:tc:dita:xsd:ditabase.xsd:1.3" uri="ditabase.xsd"/>
-      <uri name="ditabase.xsd" uri="ditabase.xsd"/>
-      <uri name="urn:fontoxml:names:tc:dita:xsd:ditabase.xsd:1.3" uri="ditabase.xsd"/>
-      
-      <system systemId="ditaval.xsd" uri="ditaval.xsd"/>
-      <system systemId="urn:fontoxml:names:tc:dita:xsd:ditaval.xsd:1.3" uri="ditaval.xsd"/>
-      <uri name="ditaval.xsd" uri="ditaval.xsd"/>
-      <uri name="urn:fontoxml:names:tc:dita:xsd:ditaval.xsd:1.3" uri="ditaval.xsd"/>
-      
-      <system systemId="generalTask.xsd" uri="generalTask.xsd"/>
-      <system systemId="urn:fontoxml:names:tc:dita:xsd:generalTask.xsd:1.3" uri="generalTask.xsd"/>
-      <uri name="generalTask.xsd" uri="generalTask.xsd"/>
-      <uri name="urn:fontoxml:names:tc:dita:xsd:generalTask.xsd:1.3" uri="generalTask.xsd"/>
-      
-      <system systemId="glossary.xsd" uri="glossary.xsd"/>
-      <system systemId="urn:fontoxml:names:tc:dita:xsd:glossary.xsd:1.3" uri="glossary.xsd"/>
-      <uri name="glossary.xsd" uri="glossary.xsd"/>
-      <uri name="urn:fontoxml:names:tc:dita:xsd:glossary.xsd:1.3" uri="glossary.xsd"/>
-      
-      <system systemId="glossentry.xsd" uri="glossentry.xsd"/>
-      <system systemId="urn:fontoxml:names:tc:dita:xsd:glossentry.xsd:1.3" uri="glossentry.xsd"/>
-      <uri name="glossentry.xsd" uri="glossentry.xsd"/>
-      <uri name="urn:fontoxml:names:tc:dita:xsd:glossentry.xsd:1.3" uri="glossentry.xsd"/>
-      
-      <system systemId="glossgroup.xsd" uri="glossgroup.xsd"/>
-      <system systemId="urn:fontoxml:names:tc:dita:xsd:glossgroup.xsd:1.3" uri="glossgroup.xsd"/>
-      <uri name="glossgroup.xsd" uri="glossgroup.xsd"/>
-      <uri name="urn:fontoxml:names:tc:dita:xsd:glossgroup.xsd:1.3" uri="glossgroup.xsd"/>
-      
-      <system systemId="learningAssessment.xsd" uri="learningAssessment.xsd"/>
-      <system systemId="urn:fontoxml:names:tc:dita:xsd:learningAssessment.xsd:1.3" uri="learningAssessment.xsd"/>
-      <uri name="learningAssessment.xsd" uri="learningAssessment.xsd"/>
-      <uri name="urn:fontoxml:names:tc:dita:xsd:learningAssessment.xsd:1.3" uri="learningAssessment.xsd"/>
-      
-      <system systemId="learningBookmap.xsd" uri="learningBookmap.xsd"/>
-      <system systemId="urn:fontoxml:names:tc:dita:xsd:learningBookmap.xsd:1.3" uri="learningBookmap.xsd"/>
-      <uri name="learningBookmap.xsd" uri="learningBookmap.xsd"/>
-      <uri name="urn:fontoxml:names:tc:dita:xsd:learningBookmap.xsd:1.3" uri="learningBookmap.xsd"/>
-      
-      <system systemId="learningContent.xsd" uri="learningContent.xsd"/>
-      <system systemId="urn:fontoxml:names:tc:dita:xsd:learningContent.xsd:1.3" uri="learningContent.xsd"/>
-      <uri name="learningContent.xsd" uri="learningContent.xsd"/>
-      <uri name="urn:fontoxml:names:tc:dita:xsd:learningContent.xsd:1.3" uri="learningContent.xsd"/>
-      
-      <system systemId="learningGroupMap.xsd" uri="learningGroupMap.xsd"/>
-      <system systemId="urn:fontoxml:names:tc:dita:xsd:learningGroupMap.xsd:1.3" uri="learningGroupMap.xsd"/>
-      <uri name="learningGroupMap.xsd" uri="learningGroupMap.xsd"/>
-      <uri name="urn:fontoxml:names:tc:dita:xsd:learningGroupMap.xsd:1.3" uri="learningGroupMap.xsd"/>
-      
-      <system systemId="learningMap.xsd" uri="learningMap.xsd"/>
-      <system systemId="urn:fontoxml:names:tc:dita:xsd:learningMap.xsd:1.3" uri="learningMap.xsd"/>
-      <uri name="learningMap.xsd" uri="learningMap.xsd"/>
-      <uri name="urn:fontoxml:names:tc:dita:xsd:learningMap.xsd:1.3" uri="learningMap.xsd"/>
-      
-      <system systemId="learningObjectMap.xsd" uri="learningObjectMap.xsd"/>
-      <system systemId="urn:fontoxml:names:tc:dita:xsd:learningObjectMap.xsd:1.3" uri="learningObjectMap.xsd"/>
-      <uri name="learningObjectMap.xsd" uri="learningObjectMap.xsd"/>
-      <uri name="urn:fontoxml:names:tc:dita:xsd:learningObjectMap.xsd:1.3" uri="learningObjectMap.xsd"/>
-      
-      <system systemId="learningOverview.xsd" uri="learningOverview.xsd"/>
-      <system systemId="urn:fontoxml:names:tc:dita:xsd:learningOverview.xsd:1.3" uri="learningOverview.xsd"/>
-      <uri name="learningOverview.xsd" uri="learningOverview.xsd"/>
-      <uri name="urn:fontoxml:names:tc:dita:xsd:learningOverview.xsd:1.3" uri="learningOverview.xsd"/>
-      
-      <system systemId="learningPlan.xsd" uri="learningPlan.xsd"/>
-      <system systemId="urn:fontoxml:names:tc:dita:xsd:learningPlan.xsd:1.3" uri="learningPlan.xsd"/>
-      <uri name="learningPlan.xsd" uri="learningPlan.xsd"/>
-      <uri name="urn:fontoxml:names:tc:dita:xsd:learningPlan.xsd:1.3" uri="learningPlan.xsd"/>
-      
-      <system systemId="learningSummary.xsd" uri="learningSummary.xsd"/>
-      <system systemId="urn:fontoxml:names:tc:dita:xsd:learningSummary.xsd:1.3" uri="learningSummary.xsd"/>
-      <uri name="learningSummary.xsd" uri="learningSummary.xsd"/>
-      <uri name="urn:fontoxml:names:tc:dita:xsd:learningSummary.xsd:1.3" uri="learningSummary.xsd"/>
-      
-      <system systemId="machineryTask.xsd" uri="machineryTask.xsd"/>
-      <system systemId="urn:fontoxml:names:tc:dita:xsd:machineryTask.xsd:1.3" uri="machineryTask.xsd"/>
-      <uri name="machineryTask.xsd" uri="machineryTask.xsd"/>
-      <uri name="urn:fontoxml:names:tc:dita:xsd:machineryTask.xsd:1.3" uri="machineryTask.xsd"/>
-      
-      <system systemId="map.xsd" uri="map.xsd"/>
-      <system systemId="urn:fontoxml:names:tc:dita:xsd:map.xsd:1.3" uri="map.xsd"/>
-      <uri name="map.xsd" uri="map.xsd"/>
-      <uri name="urn:fontoxml:names:tc:dita:xsd:map.xsd:1.3" uri="map.xsd"/>
-      
-      <system systemId="reference.xsd" uri="reference.xsd"/>
-      <system systemId="urn:fontoxml:names:tc:dita:xsd:reference.xsd:1.3" uri="reference.xsd"/>
-      <uri name="reference.xsd" uri="reference.xsd"/>
-      <uri name="urn:fontoxml:names:tc:dita:xsd:reference.xsd:1.3" uri="reference.xsd"/>
-      
-      <system systemId="subjectScheme.xsd" uri="subjectScheme.xsd"/>
-      <system systemId="urn:fontoxml:names:tc:dita:xsd:subjectScheme.xsd:1.3" uri="subjectScheme.xsd"/>
-      <uri name="subjectScheme.xsd" uri="subjectScheme.xsd"/>
-      <uri name="urn:fontoxml:names:tc:dita:xsd:subjectScheme.xsd:1.3" uri="subjectScheme.xsd"/>
-      
-      <system systemId="task.xsd" uri="task.xsd"/>
-      <system systemId="urn:fontoxml:names:tc:dita:xsd:task.xsd:1.3" uri="task.xsd"/>
-      <uri name="task.xsd" uri="task.xsd"/>
-      <uri name="urn:fontoxml:names:tc:dita:xsd:task.xsd:1.3" uri="task.xsd"/>
-      
-      <system systemId="topic.xsd" uri="topic.xsd"/>
-      <system systemId="urn:fontoxml:names:tc:dita:xsd:topic.xsd:1.3" uri="topic.xsd"/>
-      <uri name="topic.xsd" uri="topic.xsd"/>
-      <uri name="urn:fontoxml:names:tc:dita:xsd:topic.xsd:1.3" uri="topic.xsd"/>
-      
-      <system systemId="troubleshooting.xsd" uri="troubleshooting.xsd"/>
-      <system systemId="urn:fontoxml:names:tc:dita:xsd:troubleshooting.xsd:1.3" uri="troubleshooting.xsd"/>
-      <uri name="troubleshooting.xsd" uri="troubleshooting.xsd"/>
-      <uri name="urn:fontoxml:names:tc:dita:xsd:troubleshooting.xsd:1.3" uri="troubleshooting.xsd"/>
-   </group>
+	<group xml:base="constraints/">
+		<system systemId="machineryTaskbodyConstraintMod.xsd" uri="machineryTaskbodyConstraintMod.xsd"/>
+		<system systemId="urn:fontoxml:names:tc:dita:spec:machinery:xsd:machineryTaskbodyConstraintMod.xsd:1.3" uri="machineryTaskbodyConstraintMod.xsd"/>
+		<uri name="machineryTaskbodyConstraintMod.xsd" uri="machineryTaskbodyConstraintMod.xsd"/>
+		<uri name="urn:fontoxml:names:tc:dita:spec:machinery:xsd:machineryTaskbodyConstraintMod.xsd:1.3" uri="machineryTaskbodyConstraintMod.xsd"/>
+		
+		<system systemId="strictCommonElementConstraint.xsd" uri="strictCommonElementConstraint.xsd"/>
+		<system systemId="urn:fontoxml:names:tc:dita:xsd:strictCommonElementConstraint.xsd:1.3" uri="strictCommonElementConstraint.xsd"/>
+		<uri name="strictCommonElementConstraint.xsd" uri="strictCommonElementConstraint.xsd"/>
+		<uri name="urn:fontoxml:names:tc:dita:xsd:strictCommonElementConstraint.xsd:1.3" uri="strictCommonElementConstraint.xsd"/>
+		
+		<system systemId="strictCommonElementConstraintInt.xsd" uri="strictCommonElementConstraintInt.xsd"/>
+		<system systemId="urn:fontoxml:names:tc:dita:xsd:strictCommonElementConstraintInt.xsd:1.3" uri="strictCommonElementConstraintInt.xsd"/>
+		<uri name="strictCommonElementConstraintInt.xsd" uri="strictCommonElementConstraintInt.xsd"/>
+		<uri name="urn:fontoxml:names:tc:dita:xsd:strictCommonElementConstraintInt.xsd:1.3" uri="strictCommonElementConstraintInt.xsd"/>
+		
+		<system systemId="strictGlossentryConstraint.xsd" uri="strictGlossentryConstraint.xsd"/>
+		<system systemId="urn:fontoxml:names:tc:dita:xsd:strictGlossentryConstraint.xsd:1.3" uri="strictGlossentryConstraint.xsd"/>
+		<uri name="strictGlossentryConstraint.xsd" uri="strictGlossentryConstraint.xsd"/>
+		<uri name="urn:fontoxml:names:tc:dita:xsd:strictGlossentryConstraint.xsd:1.3" uri="strictGlossentryConstraint.xsd"/>
+		
+		<system systemId="strictLearning2DomainConstraint.xsd" uri="strictLearning2DomainConstraint.xsd"/>
+		<system systemId="urn:fontoxml:names:tc:dita:spec:learning:xsd:strictLearning2DomainConstraint.xsd:1.3" uri="strictLearning2DomainConstraint.xsd"/>
+		<uri name="strictLearning2DomainConstraint.xsd" uri="strictLearning2DomainConstraint.xsd"/>
+		<uri name="urn:fontoxml:names:tc:dita:spec:learning:xsd:strictLearning2DomainConstraint.xsd:1.3" uri="strictLearning2DomainConstraint.xsd"/>
+		
+		<system systemId="strictLearningBaseConstraint.xsd" uri="strictLearningBaseConstraint.xsd"/>
+		<system systemId="urn:fontoxml:names:tc:dita:spec:learning:xsd:strictLearningBaseConstraint.xsd:1.3" uri="strictLearningBaseConstraint.xsd"/>
+		<uri name="strictLearningBaseConstraint.xsd" uri="strictLearningBaseConstraint.xsd"/>
+		<uri name="urn:fontoxml:names:tc:dita:spec:learning:xsd:strictLearningBaseConstraint.xsd:1.3" uri="strictLearningBaseConstraint.xsd"/>
+		
+		<system systemId="strictLearningDomainConstraint.xsd" uri="strictLearningDomainConstraint.xsd"/>
+		<system systemId="urn:fontoxml:names:tc:dita:spec:learning:xsd:strictLearningDomainConstraint.xsd:1.3" uri="strictLearningDomainConstraint.xsd"/>
+		<uri name="strictLearningDomainConstraint.xsd" uri="strictLearningDomainConstraint.xsd"/>
+		<uri name="urn:fontoxml:names:tc:dita:spec:learning:xsd:strictLearningDomainConstraint.xsd:1.3" uri="strictLearningDomainConstraint.xsd"/>
+		
+		<system systemId="strictLearningInteractionBase2DomainConstraint.xsd" uri="strictLearningInteractionBase2DomainConstraint.xsd"/>
+		<system systemId="urn:fontoxml:names:tc:dita:spec:learning:xsd:strictLearningInteractionBase2DomainConstraint.xsd:1.3" uri="strictLearningInteractionBase2DomainConstraint.xsd"/>
+		<uri name="strictLearningInteractionBase2DomainConstraint.xsd" uri="strictLearningInteractionBase2DomainConstraint.xsd"/>
+		<uri name="urn:fontoxml:names:tc:dita:spec:learning:xsd:strictLearningInteractionBase2DomainConstraint.xsd:1.3" uri="strictLearningInteractionBase2DomainConstraint.xsd"/>
+		
+		<system systemId="strictReferenceConstraint.xsd" uri="strictReferenceConstraint.xsd"/>
+		<system systemId="urn:fontoxml:names:tc:dita:xsd:strictReferenceConstraint.xsd:1.3" uri="strictReferenceConstraint.xsd"/>
+		<uri name="strictReferenceConstraint.xsd" uri="strictReferenceConstraint.xsd"/>
+		<uri name="urn:fontoxml:names:tc:dita:xsd:strictReferenceConstraint.xsd:1.3" uri="strictReferenceConstraint.xsd"/>
+		
+		<system systemId="strictTaskbodyConstraintMod.xsd" uri="strictTaskbodyConstraintMod.xsd"/>
+		<system systemId="urn:fontoxml:names:tc:dita:xsd:strictTaskbodyConstraintMod.xsd:1.3" uri="strictTaskbodyConstraintMod.xsd"/>
+		<uri name="strictTaskbodyConstraintMod.xsd" uri="strictTaskbodyConstraintMod.xsd"/>
+		<uri name="urn:fontoxml:names:tc:dita:xsd:strictTaskbodyConstraintMod.xsd:1.3" uri="strictTaskbodyConstraintMod.xsd"/>
+		
+		<system systemId="strictTaskConstraint.xsd" uri="strictTaskConstraint.xsd"/>
+		<system systemId="urn:fontoxml:names:tc:dita:xsd:strictTaskConstraint.xsd:1.3" uri="strictTaskConstraint.xsd"/>
+		<uri name="strictTaskConstraint.xsd" uri="strictTaskConstraint.xsd"/>
+		<uri name="urn:fontoxml:names:tc:dita:xsd:strictTaskConstraint.xsd:1.3" uri="strictTaskConstraint.xsd"/>
+		
+		<system systemId="strictTaskreqDomainConstraint.xsd" uri="strictTaskreqDomainConstraint.xsd"/>
+		<system systemId="urn:fontoxml:names:tc:dita:xsd:strictTaskreqDomainConstraint.xsd:1.3" uri="strictTaskreqDomainConstraint.xsd"/>
+		<uri name="strictTaskreqDomainConstraint.xsd" uri="strictTaskreqDomainConstraint.xsd"/>
+		<uri name="urn:fontoxml:names:tc:dita:xsd:strictTaskreqDomainConstraint.xsd:1.3" uri="strictTaskreqDomainConstraint.xsd"/>
+		
+		<system systemId="strictTblDeclConstraint.xsd" uri="strictTblDeclConstraint.xsd"/>
+		<system systemId="urn:fontoxml:names:tc:dita:xsd:strictTblDeclConstraint.xsd:1.3" uri="strictTblDeclConstraint.xsd"/>
+		<uri name="strictTblDeclConstraint.xsd" uri="strictTblDeclConstraint.xsd"/>
+		<uri name="urn:fontoxml:names:tc:dita:xsd:strictTblDeclConstraint.xsd:1.3" uri="strictTblDeclConstraint.xsd"/>
+		
+		<system systemId="strictTopicConstraint.xsd" uri="strictTopicConstraint.xsd"/>
+		<system systemId="urn:fontoxml:names:tc:dita:xsd:strictTopicConstraint.xsd:1.3" uri="strictTopicConstraint.xsd"/>
+		<uri name="strictTopicConstraint.xsd" uri="strictTopicConstraint.xsd"/>
+		<uri name="urn:fontoxml:names:tc:dita:xsd:strictTopicConstraint.xsd:1.3" uri="strictTopicConstraint.xsd"/>
+		
+		<system systemId="strictTroubleshootingConstraint.xsd" uri="strictTroubleshootingConstraint.xsd"/>
+		<system systemId="urn:fontoxml:names:tc:dita:xsd:strictTroubleshootingConstraint.xsd:1.3" uri="strictTroubleshootingConstraint.xsd"/>
+		<uri name="strictTroubleshootingConstraint.xsd" uri="strictTroubleshootingConstraint.xsd"/>
+		<uri name="urn:fontoxml:names:tc:dita:xsd:strictTroubleshootingConstraint.xsd:1.3" uri="strictTroubleshootingConstraint.xsd"/>
+	</group>
+	
+	<group xml:base="shells/">
+		<system systemId="basemap.xsd" uri="basemap.xsd"/>
+		<system systemId="urn:fontoxml:names:tc:dita:xsd:basemap.xsd:1.3" uri="basemap.xsd"/>
+		<uri name="basemap.xsd" uri="basemap.xsd"/>
+		<uri name="urn:fontoxml:names:tc:dita:xsd:basemap.xsd:1.3" uri="basemap.xsd"/>
+		
+		<system systemId="basetopic.xsd" uri="basetopic.xsd"/>
+		<system systemId="urn:fontoxml:names:tc:dita:xsd:basetopic.xsd:1.3" uri="basetopic.xsd"/>
+		<uri name="basetopic.xsd" uri="basetopic.xsd"/>
+		<uri name="urn:fontoxml:names:tc:dita:xsd:basetopic.xsd:1.3" uri="basetopic.xsd"/>
+		
+		<system systemId="bookmap.xsd" uri="bookmap.xsd"/>
+		<system systemId="urn:fontoxml:names:tc:dita:xsd:bookmap.xsd:1.3" uri="bookmap.xsd"/>
+		<uri name="bookmap.xsd" uri="bookmap.xsd"/>
+		<uri name="urn:fontoxml:names:tc:dita:xsd:bookmap.xsd:1.3" uri="bookmap.xsd"/>
+		
+		<system systemId="classifyMap.xsd" uri="classifyMap.xsd"/>
+		<system systemId="urn:fontoxml:names:tc:dita:spec:classification:xsd:classifyMap.xsd:1.3" uri="classifyMap.xsd"/>
+		<uri name="classifyMap.xsd" uri="classifyMap.xsd"/>
+		<uri name="urn:fontoxml:names:tc:dita:spec:classification:xsd:classifyMap.xsd:1.3" uri="classifyMap.xsd"/>
+		
+		<system systemId="concept.xsd" uri="concept.xsd"/>
+		<system systemId="urn:fontoxml:names:tc:dita:xsd:concept.xsd:1.3" uri="concept.xsd"/>
+		<uri name="concept.xsd" uri="concept.xsd"/>
+		<uri name="urn:fontoxml:names:tc:dita:xsd:concept.xsd:1.3" uri="concept.xsd"/>
+		
+		<system systemId="ditabase.xsd" uri="ditabase.xsd"/>
+		<system systemId="urn:fontoxml:names:tc:dita:xsd:ditabase.xsd:1.3" uri="ditabase.xsd"/>
+		<uri name="ditabase.xsd" uri="ditabase.xsd"/>
+		<uri name="urn:fontoxml:names:tc:dita:xsd:ditabase.xsd:1.3" uri="ditabase.xsd"/>
+		
+		<system systemId="generalTask.xsd" uri="generalTask.xsd"/>
+		<system systemId="urn:fontoxml:names:tc:dita:xsd:generalTask.xsd:1.3" uri="generalTask.xsd"/>
+		<uri name="generalTask.xsd" uri="generalTask.xsd"/>
+		<uri name="urn:fontoxml:names:tc:dita:xsd:generalTask.xsd:1.3" uri="generalTask.xsd"/>
+		
+		<system systemId="glossary.xsd" uri="glossary.xsd"/>
+		<system systemId="urn:fontoxml:names:tc:dita:xsd:glossary.xsd:1.3" uri="glossary.xsd"/>
+		<uri name="glossary.xsd" uri="glossary.xsd"/>
+		<uri name="urn:fontoxml:names:tc:dita:xsd:glossary.xsd:1.3" uri="glossary.xsd"/>
+		
+		<system systemId="glossentry.xsd" uri="glossentry.xsd"/>
+		<system systemId="urn:fontoxml:names:tc:dita:xsd:glossentry.xsd:1.3" uri="glossentry.xsd"/>
+		<uri name="glossentry.xsd" uri="glossentry.xsd"/>
+		<uri name="urn:fontoxml:names:tc:dita:xsd:glossentry.xsd:1.3" uri="glossentry.xsd"/>
+		
+		<system systemId="glossgroup.xsd" uri="glossgroup.xsd"/>
+		<system systemId="urn:fontoxml:names:tc:dita:xsd:glossgroup.xsd:1.3" uri="glossgroup.xsd"/>
+		<uri name="glossgroup.xsd" uri="glossgroup.xsd"/>
+		<uri name="urn:fontoxml:names:tc:dita:xsd:glossgroup.xsd:1.3" uri="glossgroup.xsd"/>
+		
+		<system systemId="learningAssessment.xsd" uri="learningAssessment.xsd"/>
+		<system systemId="urn:fontoxml:names:tc:dita:spec:learning:xsd:learningAssessment.xsd:1.3" uri="learningAssessment.xsd"/>
+		<uri name="learningAssessment.xsd" uri="learningAssessment.xsd"/>
+		<uri name="urn:fontoxml:names:tc:dita:spec:learning:xsd:learningAssessment.xsd:1.3" uri="learningAssessment.xsd"/>
+		
+		<system systemId="learningBookmap.xsd" uri="learningBookmap.xsd"/>
+		<system systemId="urn:fontoxml:names:tc:dita:spec:learning:xsd:learningBookmap.xsd:1.3" uri="learningBookmap.xsd"/>
+		<uri name="learningBookmap.xsd" uri="learningBookmap.xsd"/>
+		<uri name="urn:fontoxml:names:tc:dita:spec:learning:xsd:learningBookmap.xsd:1.3" uri="learningBookmap.xsd"/>
+		
+		<system systemId="learningContent.xsd" uri="learningContent.xsd"/>
+		<system systemId="urn:fontoxml:names:tc:dita:spec:learning:xsd:learningContent.xsd:1.3" uri="learningContent.xsd"/>
+		<uri name="learningContent.xsd" uri="learningContent.xsd"/>
+		<uri name="urn:fontoxml:names:tc:dita:spec:learning:xsd:learningContent.xsd:1.3" uri="learningContent.xsd"/>
+		
+		<system systemId="learningGroupMap.xsd" uri="learningGroupMap.xsd"/>
+		<system systemId="urn:fontoxml:names:tc:dita:spec:learning:xsd:learningGroupMap.xsd:1.3" uri="learningGroupMap.xsd"/>
+		<uri name="learningGroupMap.xsd" uri="learningGroupMap.xsd"/>
+		<uri name="urn:fontoxml:names:tc:dita:spec:learning:xsd:learningGroupMap.xsd:1.3" uri="learningGroupMap.xsd"/>
+		
+		<system systemId="learningMap.xsd" uri="learningMap.xsd"/>
+		<system systemId="urn:fontoxml:names:tc:dita:spec:learning:xsd:learningMap.xsd:1.3" uri="learningMap.xsd"/>
+		<uri name="learningMap.xsd" uri="learningMap.xsd"/>
+		<uri name="urn:fontoxml:names:tc:dita:spec:learning:xsd:learningMap.xsd:1.3" uri="learningMap.xsd"/>
+		
+		<system systemId="learningObjectMap.xsd" uri="learningObjectMap.xsd"/>
+		<system systemId="urn:fontoxml:names:tc:dita:spec:learning:xsd:learningObjectMap.xsd:1.3" uri="learningObjectMap.xsd"/>
+		<uri name="learningObjectMap.xsd" uri="learningObjectMap.xsd"/>
+		<uri name="urn:fontoxml:names:tc:dita:spec:learning:xsd:learningObjectMap.xsd:1.3" uri="learningObjectMap.xsd"/>
+		
+		<system systemId="learningOverview.xsd" uri="learningOverview.xsd"/>
+		<system systemId="urn:fontoxml:names:tc:dita:spec:learning:xsd:learningOverview.xsd:1.3" uri="learningOverview.xsd"/>
+		<uri name="learningOverview.xsd" uri="learningOverview.xsd"/>
+		<uri name="urn:fontoxml:names:tc:dita:spec:learning:xsd:learningOverview.xsd:1.3" uri="learningOverview.xsd"/>
+		
+		<system systemId="learningPlan.xsd" uri="learningPlan.xsd"/>
+		<system systemId="urn:fontoxml:names:tc:dita:spec:learning:xsd:learningPlan.xsd:1.3" uri="learningPlan.xsd"/>
+		<uri name="learningPlan.xsd" uri="learningPlan.xsd"/>
+		<uri name="urn:fontoxml:names:tc:dita:spec:learning:xsd:learningPlan.xsd:1.3" uri="learningPlan.xsd"/>
+		
+		<system systemId="learningSummary.xsd" uri="learningSummary.xsd"/>
+		<system systemId="urn:fontoxml:names:tc:dita:spec:learning:xsd:learningSummary.xsd:1.3" uri="learningSummary.xsd"/>
+		<uri name="learningSummary.xsd" uri="learningSummary.xsd"/>
+		<uri name="urn:fontoxml:names:tc:dita:spec:learning:xsd:learningSummary.xsd:1.3" uri="learningSummary.xsd"/>
+		
+		<system systemId="machineryTask.xsd" uri="machineryTask.xsd"/>
+		<system systemId="urn:fontoxml:names:tc:dita:spec:machinery:xsd:machinerytask.xsd:1.3" uri="machineryTask.xsd"/>
+		<uri name="machineryTask.xsd" uri="machineryTask.xsd"/>
+		<uri name="urn:fontoxml:names:tc:dita:spec:machinery:xsd:machinerytask.xsd:1.3" uri="machineryTask.xsd"/>
+		
+		<system systemId="map.xsd" uri="map.xsd"/>
+		<system systemId="urn:fontoxml:names:tc:dita:xsd:map.xsd:1.3" uri="map.xsd"/>
+		<uri name="map.xsd" uri="map.xsd"/>
+		<uri name="urn:fontoxml:names:tc:dita:xsd:map.xsd:1.3" uri="map.xsd"/>
+		
+		<system systemId="reference.xsd" uri="reference.xsd"/>
+		<system systemId="urn:fontoxml:names:tc:dita:xsd:reference.xsd:1.3" uri="reference.xsd"/>
+		<uri name="reference.xsd" uri="reference.xsd"/>
+		<uri name="urn:fontoxml:names:tc:dita:xsd:reference.xsd:1.3" uri="reference.xsd"/>
+		
+		<system systemId="subjectScheme.xsd" uri="subjectScheme.xsd"/>
+		<system systemId="urn:fontoxml:names:tc:dita:spec:classification:xsd:subjectScheme.xsd:1.3" uri="subjectScheme.xsd"/>
+		<uri name="subjectScheme.xsd" uri="subjectScheme.xsd"/>
+		<uri name="urn:fontoxml:names:tc:dita:spec:classification:xsd:subjectScheme.xsd:1.3" uri="subjectScheme.xsd"/>
+		
+		<system systemId="task.xsd" uri="task.xsd"/>
+		<system systemId="urn:fontoxml:names:tc:dita:xsd:task.xsd:1.3" uri="task.xsd"/>
+		<uri name="task.xsd" uri="task.xsd"/>
+		<uri name="urn:fontoxml:names:tc:dita:xsd:task.xsd:1.3" uri="task.xsd"/>
+		
+		<system systemId="topic.xsd" uri="topic.xsd"/>
+		<system systemId="urn:fontoxml:names:tc:dita:xsd:topic.xsd:1.3" uri="topic.xsd"/>
+		<uri name="topic.xsd" uri="topic.xsd"/>
+		<uri name="urn:fontoxml:names:tc:dita:xsd:topic.xsd:1.3" uri="topic.xsd"/>
+		
+		<system systemId="troubleshooting.xsd" uri="troubleshooting.xsd"/>
+		<system systemId="urn:fontoxml:names:tc:dita:xsd:troubleshooting.xsd:1.3" uri="troubleshooting.xsd"/>
+		<uri name="troubleshooting.xsd" uri="troubleshooting.xsd"/>
+		<uri name="urn:fontoxml:names:tc:dita:xsd:troubleshooting.xsd:1.3" uri="troubleshooting.xsd"/>
+	</group>
 </catalog>

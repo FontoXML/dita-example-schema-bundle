@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:import namespace="http://dita.oasis-open.org/architecture/2005/" schemaLocation="urn:oasis:names:tc:dita:xsd:ditaarch.xsd:1.3"/>
+	
+	<xs:annotation>
+		<xs:appinfo>
+			<dita:domainsModule xmlns:dita="http://dita.oasis-open.org/architecture/2005/">(fontoxml strictLearning2Domain-c)</dita:domainsModule>
+		</xs:appinfo>
+	</xs:annotation>
+
+	<xs:redefine schemaLocation="urn:oasis:names:tc:dita:spec:learning:xsd:learning2Domain.xsd:1.3">
+		
+		<!-- No longer mixed -->
+		<xs:complexType name="lcInstructornote2.class">
+			<xs:complexContent>
+				<xs:restriction base="lcInstructornote2.class">
+					<xs:sequence>
+						<xs:group ref="lcInstructornote2.content"/>
+					</xs:sequence>
+					<xs:attributeGroup ref="lcInstructornote2.attributes"/>
+				</xs:restriction>
+			</xs:complexContent>
+		</xs:complexType>
+		
+		<!-- No longer mixed -->
+		<xs:complexType name="lcQuestion2.class">
+			<xs:complexContent>
+				<xs:restriction base="lcQuestion2.class">
+					<xs:sequence>
+						<xs:group ref="lcQuestion2.content"/>
+					</xs:sequence>
+					<xs:attributeGroup ref="lcQuestion2.attributes"/>
+				</xs:restriction>
+			</xs:complexContent>
+		</xs:complexType>
+		
+		<!-- No longer mixed -->
+		<xs:complexType name="lcOpenAnswer2.class">
+			<xs:complexContent>
+				<xs:restriction base="lcOpenAnswer2.class">
+					<xs:sequence>
+						<xs:group ref="lcOpenAnswer2.content"/>
+					</xs:sequence>
+					<xs:attributeGroup ref="lcOpenAnswer2.attributes"/>
+				</xs:restriction>
+			</xs:complexContent>
+		</xs:complexType>
+		
+		<!-- No longer mixed -->
+		<xs:complexType name="lcFeedback2.class">
+			<xs:complexContent>
+				<xs:restriction base="lcFeedback2.class">
+					<xs:sequence>
+						<xs:group ref="lcFeedback2.content"/>
+					</xs:sequence>
+					<xs:attributeGroup ref="lcFeedback2.attributes"/>
+				</xs:restriction>
+			</xs:complexContent>
+		</xs:complexType>
+		
+		<!-- No longer mixed -->
+		<xs:complexType name="lcFeedbackCorrect2.class">
+			<xs:complexContent>
+				<xs:restriction base="lcFeedbackCorrect2.class">
+					<xs:sequence>
+						<xs:group ref="lcFeedbackCorrect2.content"/>
+					</xs:sequence>
+					<xs:attributeGroup ref="lcFeedbackCorrect2.attributes"/>
+				</xs:restriction>
+			</xs:complexContent>
+		</xs:complexType>
+		
+		<!-- No longer mixed -->
+		<xs:complexType name="lcFeedbackIncorrect2.class">
+			<xs:complexContent>
+				<xs:restriction base="lcFeedbackIncorrect2.class">
+					<xs:sequence>
+						<xs:group ref="lcFeedbackIncorrect2.content"/>
+					</xs:sequence>
+					<xs:attributeGroup ref="lcFeedbackIncorrect2.attributes"/>
+				</xs:restriction>
+			</xs:complexContent>
+		</xs:complexType>
+		
+		<!-- No longer mixed -->
+		<xs:complexType name="lcAnswerContent2.class">
+			<xs:complexContent>
+				<xs:restriction base="lcAnswerContent2.class">
+					<xs:sequence>
+						<xs:group ref="lcAnswerContent2.content"/>
+					</xs:sequence>
+					<xs:attributeGroup ref="lcAnswerContent2.attributes"/>
+				</xs:restriction>
+			</xs:complexContent>
+		</xs:complexType>
+		
+		<!-- No longer mixed -->
+		<xs:complexType name="lcItem2.class">
+			<xs:complexContent>
+				<xs:restriction base="lcItem2.class">
+					<xs:sequence>
+						<xs:group ref="lcItem2.content"/>
+					</xs:sequence>
+					<xs:attributeGroup ref="lcItem2.attributes"/>
+				</xs:restriction>
+			</xs:complexContent>
+		</xs:complexType>
+		
+		<!-- No longer mixed -->
+		<xs:complexType name="lcMatchingItem2.class">
+			<xs:complexContent>
+				<xs:restriction base="lcMatchingItem2.class">
+					<xs:sequence>
+						<xs:group ref="lcMatchingItem2.content"/>
+					</xs:sequence>
+					<xs:attributeGroup ref="lcMatchingItem2.attributes"/>
+				</xs:restriction>
+			</xs:complexContent>
+		</xs:complexType>
+
+	</xs:redefine>
+
+</xs:schema>

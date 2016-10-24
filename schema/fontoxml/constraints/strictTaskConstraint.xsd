@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:import namespace="http://dita.oasis-open.org/architecture/2005/" schemaLocation="urn:oasis:names:tc:dita:xsd:ditaarch.xsd:1.3"/>
+	
+	<xs:annotation>
+		<xs:appinfo>
+			<dita:domainsModule xmlns:dita="http://dita.oasis-open.org/architecture/2005/">(fontoxml strictTask-c)</dita:domainsModule>
+		</xs:appinfo>
+	</xs:annotation>
+	
+
+	<xs:redefine schemaLocation="urn:oasis:names:tc:dita:xsd:taskMod.xsd:1.3">
+		
+		<xs:group name="task-info-types">
+			<xs:choice>
+				<xs:group ref="task"/>
+				<xs:group ref="info-types"/>
+			</xs:choice>
+		</xs:group>
+		
+		<xs:group name="taskPreStep">
+			<xs:sequence>
+				<xs:choice minOccurs="0" maxOccurs="unbounded">
+					<xs:group ref="context" minOccurs="0"/>
+					<xs:group ref="prereq" minOccurs="0"/>
+					<xs:group ref="section" minOccurs="0"/>
+				</xs:choice>
+			</xs:sequence>
+		</xs:group>
+		<xs:group name="taskPostStep">
+			<xs:sequence>
+				<xs:group ref="result" minOccurs="0"/>
+				<xs:group ref="tasktroubleshooting" minOccurs="0"/>
+				<xs:group ref="example" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:group ref="postreq" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:group>
+		<xs:group name="taskStep">
+			<xs:sequence>
+				<xs:choice minOccurs="0" maxOccurs="1">
+					<xs:group ref="steps"/>
+					<xs:group ref="steps-unordered"/>
+					<xs:group ref="steps-informal"/>
+				</xs:choice>
+			</xs:sequence>
+		</xs:group>
+		
+		<!-- No longer mixed -->
+		<xs:complexType name="prereq.class">
+			<xs:complexContent>
+				<xs:restriction base="prereq.class">
+					<xs:sequence>
+						<xs:group ref="prereq.content"/>
+					</xs:sequence>
+					<xs:attributeGroup ref="prereq.attributes"/>
+				</xs:restriction>
+			</xs:complexContent>
+		</xs:complexType>
+		
+		<!-- No longer mixed -->
+		<xs:complexType name="context.class">
+			<xs:complexContent>
+				<xs:restriction base="context.class">
+					<xs:sequence>
+						<xs:group ref="context.content"/>
+					</xs:sequence>
+					<xs:attributeGroup ref="context.attributes"/>
+				</xs:restriction>
+			</xs:complexContent>
+		</xs:complexType>
+		
+		<!-- No longer mixed -->
+		<xs:complexType name="steps-informal.class">
+			<xs:complexContent>
+				<xs:restriction base="steps-informal.class">
+					<xs:sequence>
+						<xs:group ref="steps-informal.content"/>
+					</xs:sequence>
+					<xs:attributeGroup ref="steps-informal.attributes"/>
+				</xs:restriction>
+			</xs:complexContent>
+		</xs:complexType>
+		
+		<!-- No longer mixed -->
+		<xs:complexType name="stepsection.class">
+			<xs:complexContent>
+				<xs:restriction base="stepsection.class">
+					<xs:sequence>
+						<xs:group ref="stepsection.content"/>
+					</xs:sequence>
+					<xs:attributeGroup ref="stepsection.attributes"/>
+				</xs:restriction>
+			</xs:complexContent>
+		</xs:complexType>
+		
+		<!-- No longer mixed -->
+		<xs:complexType name="info.class">
+			<xs:complexContent>
+				<xs:restriction base="info.class">
+					<xs:sequence>
+						<xs:group ref="info.content"/>
+					</xs:sequence>
+					<xs:attributeGroup ref="info.attributes"/>
+				</xs:restriction>
+			</xs:complexContent>
+		</xs:complexType>
+		
+		<!-- No longer mixed -->
+		<xs:complexType name="tutorialinfo.class">
+			<xs:complexContent>
+				<xs:restriction base="tutorialinfo.class">
+					<xs:sequence>
+						<xs:group ref="tutorialinfo.content"/>
+					</xs:sequence>
+					<xs:attributeGroup ref="tutorialinfo.attributes"/>
+				</xs:restriction>
+			</xs:complexContent>
+		</xs:complexType>
+		
+		<!-- No longer mixed -->
+		<xs:complexType name="stepxmp.class">
+			<xs:complexContent>
+				<xs:restriction base="stepxmp.class">
+					<xs:sequence>
+						<xs:group ref="stepxmp.content"/>
+					</xs:sequence>
+					<xs:attributeGroup ref="stepxmp.attributes"/>
+				</xs:restriction>
+			</xs:complexContent>
+		</xs:complexType>
+		
+		<!-- No longer mixed -->
+		<xs:complexType name="choice.class">
+			<xs:complexContent>
+				<xs:restriction base="choice.class">
+					<xs:sequence>
+						<xs:group ref="choice.content"/>
+					</xs:sequence>
+					<xs:attributeGroup ref="choice.attributes"/>
+				</xs:restriction>
+			</xs:complexContent>
+		</xs:complexType>
+		
+		<!-- No longer mixed -->
+		<xs:complexType name="choptionhd.class">
+			<xs:complexContent>
+				<xs:restriction base="choptionhd.class">
+					<xs:sequence>
+						<xs:group ref="choptionhd.content"/>
+					</xs:sequence>
+					<xs:attributeGroup ref="choptionhd.attributes"/>
+				</xs:restriction>
+			</xs:complexContent>
+		</xs:complexType>
+		
+		<!-- No longer mixed -->
+		<xs:complexType name="chdeschd.class">
+			<xs:complexContent>
+				<xs:restriction base="chdeschd.class">
+					<xs:sequence>
+						<xs:group ref="chdeschd.content"/>
+					</xs:sequence>
+					<xs:attributeGroup ref="chdeschd.attributes"/>
+				</xs:restriction>
+			</xs:complexContent>
+		</xs:complexType>
+		
+		<!-- No longer mixed -->
+		<xs:complexType name="choption.class">
+			<xs:complexContent>
+				<xs:restriction base="choption.class">
+					<xs:sequence>
+						<xs:group ref="choption.content"/>
+					</xs:sequence>
+					<xs:attributeGroup ref="choption.attributes"/>
+				</xs:restriction>
+			</xs:complexContent>
+		</xs:complexType>
+		
+		<!-- No longer mixed -->
+		<xs:complexType name="chdesc.class">
+			<xs:complexContent>
+				<xs:restriction base="chdesc.class">
+					<xs:sequence>
+						<xs:group ref="chdesc.content"/>
+					</xs:sequence>
+					<xs:attributeGroup ref="chdesc.attributes"/>
+				</xs:restriction>
+			</xs:complexContent>
+		</xs:complexType>
+		
+		<!-- No longer mixed -->
+		<xs:complexType name="stepresult.class">
+			<xs:complexContent>
+				<xs:restriction base="stepresult.class">
+					<xs:sequence>
+						<xs:group ref="stepresult.content"/>
+					</xs:sequence>
+					<xs:attributeGroup ref="stepresult.attributes"/>
+				</xs:restriction>
+			</xs:complexContent>
+		</xs:complexType>
+		
+		<!-- No longer mixed -->
+		<xs:complexType name="steptroubleshooting.class">
+			<xs:complexContent>
+				<xs:restriction base="steptroubleshooting.class">
+					<xs:sequence>
+						<xs:group ref="steptroubleshooting.content"/>
+					</xs:sequence>
+					<xs:attributeGroup ref="steptroubleshooting.attributes"/>
+				</xs:restriction>
+			</xs:complexContent>
+		</xs:complexType>
+		
+		<!-- No longer mixed -->
+		<xs:complexType name="tasktroubleshooting.class">
+			<xs:complexContent>
+				<xs:restriction base="tasktroubleshooting.class">
+					<xs:sequence>
+						<xs:group ref="tasktroubleshooting.content"/>
+					</xs:sequence>
+					<xs:attributeGroup ref="tasktroubleshooting.attributes"/>
+				</xs:restriction>
+			</xs:complexContent>
+		</xs:complexType>
+		
+		<!-- No longer mixed -->
+		<xs:complexType name="result.class">
+			<xs:complexContent>
+				<xs:restriction base="result.class">
+					<xs:sequence>
+						<xs:group ref="result.content"/>
+					</xs:sequence>
+					<xs:attributeGroup ref="result.attributes"/>
+				</xs:restriction>
+			</xs:complexContent>
+		</xs:complexType>
+		
+		<!-- No longer mixed -->
+		<xs:complexType name="postreq.class">
+			<xs:complexContent>
+				<xs:restriction base="postreq.class">
+					<xs:sequence>
+						<xs:group ref="postreq.content"/>
+					</xs:sequence>
+					<xs:attributeGroup ref="postreq.attributes"/>
+				</xs:restriction>
+			</xs:complexContent>
+		</xs:complexType>
+
+	</xs:redefine>
+
+</xs:schema>

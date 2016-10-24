@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:import namespace="http://dita.oasis-open.org/architecture/2005/" schemaLocation="urn:oasis:names:tc:dita:xsd:ditaarch.xsd:1.3"/>
+	
+	<xs:annotation>
+		<xs:appinfo>
+			<dita:domainsModule xmlns:dita="http://dita.oasis-open.org/architecture/2005/">(fontoxml strictTaskreqDomain-c)</dita:domainsModule>
+		</xs:appinfo>
+	</xs:annotation>
+
+	<xs:redefine schemaLocation="urn:oasis:names:tc:dita:xsd:taskreqDomain.xsd:1.3">
+		
+		<!-- No longer mixed -->
+		<xs:complexType name="reqcond.class">
+			<xs:complexContent>
+				<xs:restriction base="reqcond.class">
+					<xs:sequence>
+						<xs:group ref="reqcond.content"/>
+					</xs:sequence>
+					<xs:attributeGroup ref="reqcond.attributes"/>
+				</xs:restriction>
+			</xs:complexContent>
+		</xs:complexType>
+		
+		<!-- No longer mixed -->
+		<xs:complexType name="reqcontp.class">
+			<xs:complexContent>
+				<xs:restriction base="reqcontp.class">
+					<xs:sequence>
+						<xs:group ref="reqcontp.content"/>
+					</xs:sequence>
+					<xs:attributeGroup ref="reqcontp.attributes"/>
+				</xs:restriction>
+			</xs:complexContent>
+		</xs:complexType>
+		
+		<!-- No longer mixed -->
+		<xs:complexType name="personnel.class">
+			<xs:complexContent>
+				<xs:restriction base="personnel.class">
+					<xs:sequence>
+						<xs:group ref="personnel.content"/>
+					</xs:sequence>
+					<xs:attributeGroup ref="personnel.attributes"/>
+				</xs:restriction>
+			</xs:complexContent>
+		</xs:complexType>
+		
+		<!-- No longer mixed -->
+		<xs:complexType name="perscat.class">
+			<xs:complexContent>
+				<xs:restriction base="perscat.class">
+					<xs:sequence>
+						<xs:group ref="perscat.content"/>
+					</xs:sequence>
+					<xs:attributeGroup ref="perscat.attributes"/>
+				</xs:restriction>
+			</xs:complexContent>
+		</xs:complexType>
+		
+		<!-- No longer mixed -->
+		<xs:complexType name="perskill.class">
+			<xs:complexContent>
+				<xs:restriction base="perskill.class">
+					<xs:sequence>
+						<xs:group ref="perskill.content"/>
+					</xs:sequence>
+					<xs:attributeGroup ref="perskill.attributes"/>
+				</xs:restriction>
+			</xs:complexContent>
+		</xs:complexType>
+		
+		<!-- No longer mixed -->
+		<xs:complexType name="esttime.class">
+			<xs:complexContent>
+				<xs:restriction base="esttime.class">
+					<xs:sequence>
+						<xs:group ref="esttime.content"/>
+					</xs:sequence>
+					<xs:attributeGroup ref="esttime.attributes"/>
+				</xs:restriction>
+			</xs:complexContent>
+		</xs:complexType>
+		
+		<!-- No longer mixed -->
+		<xs:complexType name="supequi.class">
+			<xs:complexContent>
+				<xs:restriction base="supequi.class">
+					<xs:sequence>
+						<xs:group ref="supequi.content"/>
+					</xs:sequence>
+					<xs:attributeGroup ref="supequi.attributes"/>
+				</xs:restriction>
+			</xs:complexContent>
+		</xs:complexType>
+		
+		<!-- No longer mixed -->
+		<xs:complexType name="supply.class">
+			<xs:complexContent>
+				<xs:restriction base="supply.class">
+					<xs:sequence>
+						<xs:group ref="supply.content"/>
+					</xs:sequence>
+					<xs:attributeGroup ref="supply.attributes"/>
+				</xs:restriction>
+			</xs:complexContent>
+		</xs:complexType>
+		
+		<!-- No longer mixed -->
+		<xs:complexType name="spare.class">
+			<xs:complexContent>
+				<xs:restriction base="spare.class">
+					<xs:sequence>
+						<xs:group ref="spare.content"/>
+					</xs:sequence>
+					<xs:attributeGroup ref="spare.attributes"/>
+				</xs:restriction>
+			</xs:complexContent>
+		</xs:complexType>
+		
+		<!-- No longer mixed -->
+		<xs:complexType name="safecond.class">
+			<xs:complexContent>
+				<xs:restriction base="safecond.class">
+					<xs:sequence>
+						<xs:group ref="safecond.content"/>
+					</xs:sequence>
+					<xs:attributeGroup ref="safecond.attributes"/>
+				</xs:restriction>
+			</xs:complexContent>
+		</xs:complexType>
+
+	</xs:redefine>
+
+</xs:schema>
