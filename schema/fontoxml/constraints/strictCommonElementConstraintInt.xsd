@@ -6,11 +6,10 @@
 		<!-- Remove unused elements -->
 		<xs:group name="basic.phandblock">
 			<xs:sequence>
-				<xs:choice>
-					<xs:group ref="basic.block"/>
-					<xs:sequence/>
-					<!--<xs:group ref="basic.ph"/>-->
-				</xs:choice>
+				<xs:sequence minOccurs="0">
+					<xs:group ref="basic.phandblock"/>
+				</xs:sequence>
+				<xs:group ref="strict-basic.phandblock"/>
 			</xs:sequence>
 		</xs:group>
 		
@@ -296,6 +295,16 @@
 		</xs:group>
 
 	</xs:redefine>
+	
+	<!-- Do not included basic.ph -->
+	<xs:group name="strict-basic.phandblock">
+		<xs:sequence>
+			<xs:sequence/>
+			<xs:choice>
+				<xs:group ref="basic.block"/>
+			</xs:choice>
+		</xs:sequence>
+	</xs:group>
 	
 	<!-- Changed content model to (image, %basic.ph%, %data.elements.incl%, %foreign.unknown.incl%, %txt.incl%) -->
 	<xs:group name="strict-p.content">
