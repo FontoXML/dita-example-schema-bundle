@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:x="http://www.jenitennison.com/xslt/xspec" stylesheet="../xsltMixedContent.xsl">
+	<x:scenario label="Full file test">
+		<x:context href="inputFuleFileTest.xml"/>
+		<x:expect label="wrap in p and nodes before the rootelement are created correctly" href="outputFuleFileTest.xml"/>
+	</x:scenario>
+	<x:scenario label="Text, inline elements and block level elements are mixed">
+		<x:context>
+			<body>
+				<ul>
+					<li>text <p>paragraf</p> text <b>bold text</b> text</li>
+				</ul>
+			</body>
+		</x:context>
+		<x:expect label="Text and inline elements are wrapped in a p element">
+			<body>
+				<ul>
+					<li><p>text </p><p>paragraf</p><p> text <b>bold text</b> text</p></li>
+				</ul>
+			</body>
+		</x:expect>
+	</x:scenario>
+	<x:scenario label="Text, inline elements, comments and block level elements are mixed">
+		<x:context>
+			<body>
+				<ul>
+					<li><!-- comment 1 -->text <!-- comment 2 --><p>paragraf</p><!-- comment 3 --> text <!-- comment 4 --><b>bold text</b><!-- comment 5 --> text<!-- comment 6 --></li>
+				</ul>
+			</body>
+		</x:context>
+		<x:expect label="Text and inline elements are wrapped in a p element">
+			<body>
+				<ul>
+					<li><!-- comment 1 --><p>text </p><!-- comment 2 --><p>paragraf</p><!-- comment 3 --><p> text <!-- comment 4 --><b>bold text</b><!-- comment 5 --> text</p><!-- comment 6 --></li>
+				</ul>
+			</body>
+		</x:expect>
+	</x:scenario>
+	<x:scenario label="When there are block level elements in a p element">
+		<x:context>
+			<body>
+				<p id="p-id">text that was contained by a <b>p</b> element together with the note<note>a note that was contained by a p element</note> paragraph after note<note>this is the next note</note></p>
+			</body>
+		</x:context>
+		<x:expect label="The p element is removed and a new p element is wrapped around the inline elements">
+			<body>
+				<p>text that was contained by a <b>p</b> element together with the note</p>
+				<note>
+					<p>a note that was contained by a p element</p>
+				</note>
+				<p> paragraph after note</p>
+				<note><p>this is the next note</p></note>
+			</body>
+		</x:expect>
+	</x:scenario>
+	<x:scenario label="When there are block level elements and comments in a p element">
+		<x:context>
+			<body>
+				<p id="p-id"><!-- comment 1 -->text that was contained by a <!-- comment 2 --><b>p</b> element together with the note<!-- comment 3 --><note>a note that was contained by a p element</note> paragraph<!-- comment 4 --> after note<note>this is the next note</note><!-- comment 5 --></p>
+			</body>
+		</x:context>
+		<x:expect label="The p element is removed and a new p element is wrapped around the inline elements">
+			<body>
+				<!-- comment 1 -->
+				<p>text that was contained by a <!-- comment 2 --><b>p</b> element together with the note</p>
+				<!-- comment 3 -->
+				<note>
+					<p>a note that was contained by a p element</p>
+				</note>
+				<p> paragraph<!-- comment 4 --> after note</p>
+				<note><p>this is the next note</p></note>
+				<!-- comment 5 -->
+			</body>
+		</x:expect>
+	</x:scenario>
+	<x:scenario label="When there is an image outside the p">
+		<x:context>
+			<note><image href="test.png"/><p>A paragraph</p></note>
+		</x:context>
+		<x:expect label="Nothing should happen">
+			<note><image href="test.png"/><p>A paragraph</p></note>
+		</x:expect>
+	</x:scenario>
+	<x:scenario label="When there is an image and text outside the p">
+		<x:context>
+			<note><image href="test.png"/>A paragraph</note>
+		</x:context>
+		<x:expect label="The text should be wrapped">
+			<note><image href="test.png"/><p>A paragraph</p></note>
+		</x:expect>
+	</x:scenario>
+	<x:scenario label="When there is an note and image and text in the p">
+		<x:context>
+			<body>
+				<p>tekst<b>bold</b><image href="test.png"/> tekst <image href="test.png"/> <note>a note</note> tekst <image href="test.png"/></p>
+			</body>
+		</x:context>
+		<x:expect label="The text with images should be wrapped">
+			<body>
+				<p>tekst<b>bold</b><image href="test.png"/> tekst <image href="test.png"/> </p>
+				<note><p>a note</p></note>
+				<p> tekst <image href="test.png"/></p>
+			</body>
+		</x:expect>
+	</x:scenario>
+	<x:scenario label="When there is an image and text in the p">
+		<x:context>
+			<body>
+				<p>tekst<image href="test.png"/></p>
+			</body>
+		</x:context>
+		<x:expect label="Nothing should happen">
+			<body>
+				<p>tekst<image href="test.png"/></p>
+			</body>
+		</x:expect>
+	</x:scenario>
+	<x:scenario label="When there is an image and text in the note">
+		<x:context>
+			<note>tekst<image href="test.png"/><b>bold</b> tekst</note>
+		</x:context>
+		<x:expect label="Nothing should happen">
+			<note><p>tekst</p><image href="test.png"/><p><b>bold</b> tekst</p></note>
+		</x:expect>
+	</x:scenario>
+</x:description>

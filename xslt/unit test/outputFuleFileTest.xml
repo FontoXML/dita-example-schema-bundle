@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- comment -->
+<?test test="node before root node"?>
+<topic id="a" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:fontoxml:names:tc:dita:xsd:topic.xsd:1.3">
+	<title>Full file test</title>
+	<body>
+		<p><draft-comment><p>Test draft comment in body</p></draft-comment>
+		</p>
+		<p><image href="test.png"/></p>
+		<note><p>A note</p></note>
+	</body>
+</topic>
