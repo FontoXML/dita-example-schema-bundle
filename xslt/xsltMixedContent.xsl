@@ -2,6 +2,13 @@
 <xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<xsl:output method="xml" encoding="utf-8"/>
 	
+	<!-- Strip whitespace in all elements -->
+	<xsl:strip-space elements="*"/>
+	
+	<!-- Except in all elements with mixed content -->
+	<!-- TODO: should contain all elements which are mixed content after the contraints -->
+	<xsl:preserve-space elements="p abbreviated-form apiname b boolean cite cmdname codeph draft-comment equation-inline filepath fn i indexterm indextermref keyword line-through markupname mathml menucascade msgnum msgph numcharref option overline parameterentity parmname ph q required-cleanup sort-as state sub sup svg-container synph systemoutput term text textentity tm tt u uicontrol userinput varname wintitle xmlatt xmlelement xmlnsname xmlpi xref"/>
+	
 	<xsl:variable name="inlineContaining"
 		select="'*abstract* *body* *bodydiv* *cause* *chdesc* *chdeschd* *choice* *choption* *choptionhd* *conbody* *condition* *context* *dd* *desc* *div* *draft-comment* *entry* *equation-figure* *esttime* *example* *fig* *figgroup* *fn* *glossdef* *glossScopeNote* *glossUsage* *info* *itemgroup* *lcAnswerContent2* *lcAudience* *lcChallenge* *lcCIN* *lcClassroom* *lcClient* *lcConstraints* *lcDelivDate* *lcDownloadTime* *lcFeedback2* *lcFeedbackCorrect2* *lcFeedbackIncorrect2* *lcFileSizeLimitations* *lcGraphics* *lcHandouts* *lcInstruction* *lcInstructornote* *lcInstructornote2* *lcInteractionBase* *lcInteractionBase2* *lcIntro* *lcItem2* *lcLMS* *lcMatchingItem2* *lcModDate* *lcNextSteps* *lcNoLMS* *lcOJT* *lcOpenAnswer2* *lcPlanDescrip* *lcPlanPrereqs* *lcPlanSubject* *lcPlanTitle* *lcPlayers* *lcPrereqs* *lcQuestion2* *lcQuestionBase2* *lcResolution* *lcResources* *lcReview* *lcSecurity* *lcSummary* *lcViewers* *lcW3C* *li* *linkinfo* *lq* *note* *pd* *perscat* *perskill* *personnel* *postreq* *prereq* *propdesc* *propdeschd* *proptypehd* *propvaluehd* *refsyn* *reqcond* *reqcontp* *result* *safecond* *section* *sectiondiv* *spare* *stentry* *stepresult* *stepsection* *steps-informal* *steptroubleshooting* *stepxmp* *supequi* *supply* *tasktroubleshooting* *tutorialinfo*'"/>
 	
@@ -34,7 +41,15 @@
 		</xsl:if>
 	</xsl:template>
 	
-	<xsl:template match="text() | comment() | processing-instruction()">
+	<!-- By default collapse to consecutive whitespace characters to a single space -->
+	<!-- TODO: Except for pre (including specializations), see http://docs.oasis-open.org/dita/dita/v1.3/os/part3-all-inclusive/langRef/base/pre.html -->
+	<!-- TODO: Except for lines (including specializations), see http://docs.oasis-open.org/dita/dita/v1.3/os/part3-all-inclusive/langRef/base/lines.html#lines -->
+	<xsl:template match="text()">
+		<xsl:value-of select="replace(., '(\s\s+)', ' ', 'm')" />
+		<xsl:apply-templates select="following-sibling::node()[1]"/>
+	</xsl:template>
+	
+	<xsl:template match="comment() | processing-instruction()">
 		<xsl:copy/>
 		<xsl:apply-templates select="following-sibling::node()[1]"/>
 	</xsl:template>
