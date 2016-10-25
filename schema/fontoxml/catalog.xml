@@ -42,6 +42,11 @@
 		<uri name="strictLearningInteractionBase2DomainConstraint.xsd" uri="strictLearningInteractionBase2DomainConstraint.xsd"/>
 		<uri name="urn:fontoxml:names:tc:dita:spec:learning:xsd:strictLearningInteractionBase2DomainConstraint.xsd:1.3" uri="strictLearningInteractionBase2DomainConstraint.xsd"/>
 		
+		<system systemId="strictProgrammingDomainConstraint.xsd" uri="strictProgrammingDomainConstraint.xsd"/>
+		<system systemId="urn:fontoxml:names:tc:dita:xsd:strictProgrammingDomainConstraint.xsd:1.3" uri="strictProgrammingDomainConstraint.xsd"/>
+		<uri name="strictProgrammingDomainConstraint.xsd" uri="strictProgrammingDomainConstraint.xsd"/>
+		<uri name="urn:fontoxml:names:tc:dita:xsd:strictProgrammingDomainConstraint.xsd:1.3" uri="strictProgrammingDomainConstraint.xsd"/>
+		
 		<system systemId="strictReferenceConstraint.xsd" uri="strictReferenceConstraint.xsd"/>
 		<system systemId="urn:fontoxml:names:tc:dita:xsd:strictReferenceConstraint.xsd:1.3" uri="strictReferenceConstraint.xsd"/>
 		<uri name="strictReferenceConstraint.xsd" uri="strictReferenceConstraint.xsd"/>
