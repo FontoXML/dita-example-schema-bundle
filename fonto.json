@@ -3,152 +3,152 @@
 		"schema/fontoxml/shells/basemap.xsd": {
 			"packageName": "dita-standard-sx-shells-basemap",
 			"locations": [
-				"urn:fontoxml/shells:names:tc:dita:xsd:basemap.xsd:1.3"
+				"urn:fontoxml:names:tc:dita:xsd:basemap.xsd:1.3"
 			]
 		},
 		"schema/fontoxml/shells/basetopic.xsd": {
 			"packageName": "dita-standard-sx-shells-basetopic",
 			"locations": [
-				"urn:fontoxml/shells:names:tc:dita:xsd:basetopic.xsd:1.3"
+				"urn:fontoxml:names:tc:dita:xsd:basetopic.xsd:1.3"
 			]
 		},
 		"schema/fontoxml/shells/bookmap.xsd": {
 			"packageName": "dita-standard-sx-shells-bookmap",
 			"locations": [
-				"urn:fontoxml/shells:names:tc:dita:xsd:bookmap.xsd:1.3"
+				"urn:fontoxml:names:tc:dita:xsd:bookmap.xsd:1.3"
 			]
 		},
 		"schema/fontoxml/shells/classifyMap.xsd": {
 			"packageName": "dita-standard-sx-shells-classify-map",
 			"locations": [
-				"urn:fontoxml/shells:names:tc:dita:spec:classification:xsd:classifyMap.xsd:1.3"
+				"urn:fontoxml:names:tc:dita:spec:classification:xsd:classifyMap.xsd:1.3"
 			]
 		},
 		"schema/fontoxml/shells/concept.xsd": {
 			"packageName": "dita-standard-sx-shells-concept",
 			"locations": [
-				"urn:fontoxml/shells:names:tc:dita:xsd:concept.xsd:1.3"
+				"urn:fontoxml:names:tc:dita:xsd:concept.xsd:1.3"
 			]
 		},
 		"schema/fontoxml/shells/ditabase.xsd": {
 			"packageName": "dita-standard-sx-shells-ditabase",
 			"locations": [
-				"urn:fontoxml/shells:names:tc:dita:xsd:ditabase.xsd:1.3"
+				"urn:fontoxml:names:tc:dita:xsd:ditabase.xsd:1.3"
 			]
 		},
 		"schema/fontoxml/shells/generalTask.xsd": {
 			"packageName": "dita-standard-sx-shells-general-task",
 			"locations": [
-				"urn:fontoxml/shells:names:tc:dita:xsd:generalTask.xsd:1.3"
+				"urn:fontoxml:names:tc:dita:xsd:generalTask.xsd:1.3"
 			]
 		},
 		"schema/fontoxml/shells/glossentry.xsd": {
 			"packageName": "dita-standard-sx-shells-glossentry",
 			"locations": [
-				"urn:fontoxml/shells:names:tc:dita:xsd:glossary.xsd:1.3",
-				"urn:fontoxml/shells:names:tc:dita:xsd:glossentry.xsd:1.3"
+				"urn:fontoxml:names:tc:dita:xsd:glossary.xsd:1.3",
+				"urn:fontoxml:names:tc:dita:xsd:glossentry.xsd:1.3"
 			]
 		},
 		"schema/fontoxml/shells/glossgroup.xsd": {
 			"packageName": "dita-standard-sx-shells-glossgroup",
 			"locations": [
-				"urn:fontoxml/shells:names:tc:dita:xsd:glossgroup.xsd:1.3"
+				"urn:fontoxml:names:tc:dita:xsd:glossgroup.xsd:1.3"
 			]
 		},
 		"schema/fontoxml/shells/learningAssessment.xsd": {
 			"packageName": "dita-standard-sx-shells-learning-assessment",
 			"locations": [
-				"urn:fontoxml/shells:names:tc:dita:spec:learning:xsd:learningAssessment.xsd:1.3"
+				"urn:fontoxml:names:tc:dita:spec:learning:xsd:learningAssessment.xsd:1.3"
 			]
 		},
 		"schema/fontoxml/shells/learningBookmap.xsd": {
 			"packageName": "dita-standard-sx-shells-learning-bookmap",
 			"locations": [
-				"urn:fontoxml/shells:names:tc:dita:spec:learning:xsd:learningBookmap.xsd:1.3"
+				"urn:fontoxml:names:tc:dita:spec:learning:xsd:learningBookmap.xsd:1.3"
 			]
 		},
 		"schema/fontoxml/shells/learningContent.xsd": {
 			"packageName": "dita-standard-sx-shells-learning-content",
 			"locations": [
-				"urn:fontoxml/shells:names:tc:dita:spec:learning:xsd:learningContent.xsd:1.3"
+				"urn:fontoxml:names:tc:dita:spec:learning:xsd:learningContent.xsd:1.3"
 			]
 		},
 		"schema/fontoxml/shells/learningGroupMap.xsd": {
 			"packageName": "dita-standard-sx-shells-learning-group-map",
 			"locations": [
-				"urn:fontoxml/shells:names:tc:dita:spec:learning:xsd:learningGroupMap.xsd:1.3"
+				"urn:fontoxml:names:tc:dita:spec:learning:xsd:learningGroupMap.xsd:1.3"
 			]
 		},
 		"schema/fontoxml/shells/learningMap.xsd": {
 			"packageName": "dita-standard-sx-shells-learning-map",
 			"locations": [
-				"urn:fontoxml/shells:names:tc:dita:spec:learning:xsd:learningMap.xsd:1.3"
+				"urn:fontoxml:names:tc:dita:spec:learning:xsd:learningMap.xsd:1.3"
 			]
 		},
 		"schema/fontoxml/shells/learningObjectMap.xsd": {
 			"packageName": "dita-standard-sx-shells-learning-object-map",
 			"locations": [
-				"urn:fontoxml/shells:names:tc:dita:spec:learning:xsd:learningObjectMap.xsd:1.3"
+				"urn:fontoxml:names:tc:dita:spec:learning:xsd:learningObjectMap.xsd:1.3"
 			]
 		},
 		"schema/fontoxml/shells/learningOverview.xsd": {
 			"packageName": "dita-standard-sx-shells-learning-overview",
 			"locations": [
-				"urn:fontoxml/shells:names:tc:dita:spec:learning:xsd:learningOverview.xsd:1.3"
+				"urn:fontoxml:names:tc:dita:spec:learning:xsd:learningOverview.xsd:1.3"
 			]
 		},
 		"schema/fontoxml/shells/learningPlan.xsd": {
 			"packageName": "dita-standard-sx-shells-learning-plan",
 			"locations": [
-				"urn:fontoxml/shells:names:tc:dita:spec:learning:xsd:learningPlan.xsd:1.3"
+				"urn:fontoxml:names:tc:dita:spec:learning:xsd:learningPlan.xsd:1.3"
 			]
 		},
 		"schema/fontoxml/shells/learningSummary.xsd": {
 			"packageName": "dita-standard-sx-shells-learning-summary",
 			"locations": [
-				"urn:fontoxml/shells:names:tc:dita:spec:learning:xsd:learningSummary.xsd:1.3"
+				"urn:fontoxml:names:tc:dita:spec:learning:xsd:learningSummary.xsd:1.3"
 			]
 		},
 		"schema/fontoxml/shells/machineryTask.xsd": {
 			"packageName": "dita-standard-sx-shells-machinery-task",
 			"locations": [
-				"urn:fontoxml/shells:names:tc:dita:spec:machinery:xsd:machinerytask.xsd:1.3"
+				"urn:fontoxml:names:tc:dita:spec:machinery:xsd:machinerytask.xsd:1.3"
 			]
 		},
 		"schema/fontoxml/shells/map.xsd": {
 			"packageName": "dita-standard-sx-shells-map",
 			"locations": [
-				"urn:fontoxml/shells:names:tc:dita:xsd:map.xsd:1.3"
+				"urn:fontoxml:names:tc:dita:xsd:map.xsd:1.3"
 			]
 		},
 		"schema/fontoxml/shells/reference.xsd": {
 			"packageName": "dita-standard-sx-shells-reference",
 			"locations": [
-				"urn:fontoxml/shells:names:tc:dita:xsd:reference.xsd:1.3"
+				"urn:fontoxml:names:tc:dita:xsd:reference.xsd:1.3"
 			]
 		},
 		"schema/fontoxml/shells/subjectScheme.xsd": {
 			"packageName": "dita-standard-sx-shells-subject-scheme",
 			"locations": [
-				"urn:fontoxml/shells:names:tc:dita:spec:classification:xsd:subjectScheme.xsd:1.3"
+				"urn:fontoxml:names:tc:dita:spec:classification:xsd:subjectScheme.xsd:1.3"
 			]
 		},
 		"schema/fontoxml/shells/task.xsd": {
 			"packageName": "dita-standard-sx-shells-task",
 			"locations": [
-				"urn:fontoxml/shells:names:tc:dita:xsd:task.xsd:1.3"
+				"urn:fontoxml:names:tc:dita:xsd:task.xsd:1.3"
 			]
 		},
 		"schema/fontoxml/shells/topic.xsd": {
 			"packageName": "dita-standard-sx-shells-topic",
 			"locations": [
-				"urn:fontoxml/shells:names:tc:dita:xsd:topic.xsd:1.3"
+				"urn:fontoxml:names:tc:dita:xsd:topic.xsd:1.3"
 			]
 		},
 		"schema/fontoxml/shells/troubleshooting.xsd": {
 			"packageName": "dita-standard-sx-shells-troubleshooting",
 			"locations": [
-				"urn:fontoxml/shells:names:tc:dita:xsd:troubleshooting.xsd:1.3"
+				"urn:fontoxml:names:tc:dita:xsd:troubleshooting.xsd:1.3"
 			]
 		}
 	},
