@@ -59,24 +59,24 @@
 				<xsl:variable name="removeLeadingAndTrailingSpaces">
 					<xsl:value-of select="replace(., '^\s+|\s+$', '', 'm')" />
 				</xsl:variable>
-				<xsl:value-of select="replace($removeLeadingAndTrailingSpaces, '(\s\s+)', ' ', 'm')" />
+				<xsl:value-of select="replace($removeLeadingAndTrailingSpaces, '\s+', ' ', 'm')" />
 			</xsl:when>
 			<xsl:when test="not(preceding-sibling::* or preceding-sibling::text()) 
 				and parent::*[contains($mixed, concat('*', name(), '*')) and parent::*[not(contains($mixed, concat('*', name(), '*')))]]">
 				<xsl:variable name="removeLeadingSpaces">
 					<xsl:value-of select="replace(.,'^\s+','','m')" />
 				</xsl:variable>
-				<xsl:value-of select="replace($removeLeadingSpaces, '(\s\s+)', ' ', 'm')" />
+				<xsl:value-of select="replace($removeLeadingSpaces, '\s+', ' ', 'm')" />
 			</xsl:when>
 			<xsl:when test="not(following-sibling::* or following-sibling::text()) 
 				and parent::*[contains($mixed, concat('*', name(), '*')) and parent::*[not(contains($mixed, concat('*', name(), '*')))]]">
 				<xsl:variable name="removeTrailingSpaces">
 					<xsl:value-of select="replace(., '\s+$', '', 'm')" />
 				</xsl:variable>
-				<xsl:value-of select="replace($removeTrailingSpaces, '(\s\s+)', ' ', 'm')" />
+				<xsl:value-of select="replace($removeTrailingSpaces, '\s+', ' ', 'm')" />
 			</xsl:when>
 			<xsl:otherwise>
-				<xsl:value-of select="replace(., '(\s\s+)', ' ', 'm')" />
+				<xsl:value-of select="replace(., '\s+', ' ', 'm')" />
 			</xsl:otherwise>
 		</xsl:choose>
 		<xsl:apply-templates select="following-sibling::node()[1]"/>
@@ -179,22 +179,22 @@
 						<xsl:variable name="removeLeadingAndTrailingSpaces">
 							<xsl:value-of select="replace(., '^\s+|\s+$', '', 'm')" />
 						</xsl:variable>
-						<xsl:value-of select="replace($removeLeadingAndTrailingSpaces, '(\s\s+)', ' ', 'm')" />
+						<xsl:value-of select="replace($removeLeadingAndTrailingSpaces, '\s+', ' ', 'm')" />
 					</xsl:when>
 					<xsl:when test="not(preceding-sibling::node()[not(self::comment() or self::processing-instruction())][1][self::text() or self::*[contains($inline, concat('*', name(), '*'))]])">
 						<xsl:variable name="removeLeadingSpaces">
 							<xsl:value-of select="replace(.,'^\s+','')" />
 						</xsl:variable>
-						<xsl:value-of select="replace($removeLeadingSpaces, '(\s\s+)', ' ', 'm')" />
+						<xsl:value-of select="replace($removeLeadingSpaces, '\s+', ' ', 'm')" />
 					</xsl:when>
 					<xsl:when test="not(following-sibling::node()[not(self::comment() or self::processing-instruction())][1][self::text() or self::*[contains($inline, concat('*', name(), '*'))]])">
 						<xsl:variable name="removeTrailingSpaces">
 							<xsl:value-of select="replace(., '\s+$', '', 'm')" />
 						</xsl:variable>
-						<xsl:value-of select="replace($removeTrailingSpaces, '(\s\s+)', ' ', 'm')" />
+						<xsl:value-of select="replace($removeTrailingSpaces, '\s+', ' ', 'm')" />
 					</xsl:when>
 					<xsl:otherwise>
-						<xsl:value-of select="replace(., '(\s\s+)', ' ', 'm')" />
+						<xsl:value-of select="replace(., '\s+', ' ', 'm')" />
 					</xsl:otherwise>
 				</xsl:choose>
 			</xsl:when>
@@ -237,22 +237,22 @@
 						<xsl:variable name="removeLeadingAndTrailingSpaces">
 							<xsl:value-of select="replace(., '^\s+|\s+$', '', 'm')" />
 						</xsl:variable>
-						<xsl:value-of select="replace($removeLeadingAndTrailingSpaces, '(\s\s+)', ' ', 'm')" />
+						<xsl:value-of select="replace($removeLeadingAndTrailingSpaces, '\s+', ' ', 'm')" />
 					</xsl:when>
 					<xsl:when test="not(preceding-sibling::node()[not(self::comment() or self::processing-instruction())][1][self::text() or self::*[not(contains($block, concat('*', name(), '*')))]])">
 						<xsl:variable name="removeLeadingSpaces">
 							<xsl:value-of select="replace(.,'^\s+','')" />
 						</xsl:variable>
-						<xsl:value-of select="replace($removeLeadingSpaces, '(\s\s+)', ' ', 'm')" />
+						<xsl:value-of select="replace($removeLeadingSpaces, '\s+', ' ', 'm')" />
 					</xsl:when>
 					<xsl:when test="not(following-sibling::node()[not(self::comment() or self::processing-instruction())][1][self::text() or self::*[not(contains($block, concat('*', name(), '*')))]])">
 						<xsl:variable name="removeTrailingSpaces">
 							<xsl:value-of select="replace(., '\s+$', '', 'm')" />
 						</xsl:variable>
-						<xsl:value-of select="replace($removeTrailingSpaces, '(\s\s+)', ' ', 'm')" />
+						<xsl:value-of select="replace($removeTrailingSpaces, '\s+', ' ', 'm')" />
 					</xsl:when>
 					<xsl:otherwise>
-						<xsl:value-of select="replace(., '(\s\s+)', ' ', 'm')" />
+						<xsl:value-of select="replace(., '\s+', ' ', 'm')" />
 					</xsl:otherwise>
 				</xsl:choose>
 			</xsl:when>
