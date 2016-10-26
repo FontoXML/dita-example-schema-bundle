@@ -7,7 +7,9 @@
 	
 	<!-- Except in all elements with mixed content -->
 	<!-- TODO: should contain all elements which are mixed content after the contraints -->
-	<xsl:preserve-space elements="p abbreviated-form apiname b boolean cite cmdname codeph draft-comment equation-inline filepath fn i indexterm indextermref keyword line-through markupname mathml menucascade msgnum msgph numcharref option overline parameterentity parmname ph q required-cleanup sort-as state sub sup svg-container synph systemoutput term text textentity tm tt u uicontrol userinput varname wintitle xmlatt xmlelement xmlnsname xmlpi xref"/>
+	<xsl:preserve-space elements="data unknown foreign title navtitle desc p note lq q sli li itemgroup dthd ddhd dt dd pre lines div text keyword term ph tm alt stentry draft-comment required-cleanup fn indexterm index-base cite xref dvrResourcePrefix dvrResourceSuffix dvrKeyscopePrefix dvrKeyscopeSuffix typeofhazard consequence howtoavoid b u i line-through overline tt sup sub index-see index-see-also index-sort-as shortdesc linktext searchtitle author source publisher copyrholder category prodname brand series platform prognum featnum component entry searchtitle shortdesc abstract bodydiv section sectiondiv example linktext linkinfo shape coords sort-as person organization summary printlocation revisionid year month day bookpartno edition isbn booknumber volume booklibrary mainbooktitle booktitlealt alt-text lcInstructornote2 lcQuestion2 lcOpenAnswer2 lcFeedback2 lcFeedbackCorrect2 lcFeedbackIncorrect2 lcAnswerContent2 lcItem2 lcMatchingItem2 lcAreaShape2 lcAreaCoords2 lcIntro lcObjectivesStem lcObjective lcAudience lcTime lcPrereqs lcSummary lcNextSteps lcReview lcResources lcChallenge lcInstruction lcInstructornote lcQuestion lcOpenAnswer lcFeedback lcFeedbackCorrect lcFeedbackIncorrect lcAnswerContent lcItem lcMatchingItem lcAreaShape lcAreaCoords lcInteractionLabel2 lcQuestionBase2 lcQuestionBase lomStructure lomCoverage lomAggregationLevel lomTechRequirement lomInstallationRemarks lomOtherPlatformRequirements lomInteractivityType lomLearningResourceType lomInteractivityLevel lomSemanticDensity lomIntendedUserRole lomContext lomTypicalAgeRange lomDifficulty lomTypicalLearningTime lcGeneralDescription lcGoals lcNeeds lcValues lcOrgConstraints lcEdLevel lcAge lcBackground lcSkills lcKnowledge lcMotivation lcSpecChars lcWorkEnvDescription lcPlanResources lcProcesses lcTaskItem lcAttitude lcPlanObjective lcJtaItem lcGapItemDelta lcLearnStrat lcAssessment lcDelivery equation-inline equation-block equation-number glossterm glossdef glossAbbreviation glossAcronym glossShortForm glossSynonym glossProperty glossSurfaceForm glossUsage glossScopeNote markupname codeph codeblock option var parmname synph oper delim sep apiname pt pd fragref synnote repsep kwd refsyn proptypehd propvaluehd propdeschd proptype propvalue propdesc change-person change-organization change-revisionid change-request-system change-request-id change-started change-completed change-summary msgph msgblock msgnum cmdname varname filepath userinput systemoutput prereq context steps-informal stepsection cmd info tutorialinfo stepxmp choice choptionhd chdeschd choption chdesc stepresult steptroubleshooting tasktroubleshooting result postreq reqcond reqcontp personnel perscat perskill esttime supequi supply spare safecond responsibleParty uicontrol wintitle shortcut screen numcharref parameterentity textentity xmlatt xmlelement xmlnsname xmlpi organizationname honorific firstname middlename lastname generationidentifier otherinfo addressdetails locality localityname administrativearea thoroughfare postalcode country contactnumber emailaddress url" />
+	
+	<xsl:variable name="mixed" select="'*year* *volume* *var* *url* *unknown* *typeofhazard* *title* *thoroughfare* *synnote* *summary* *source* *sli* *shortdesc* *shortdesc* *shortcut* *shape* *series* *sep* *searchtitle* *searchtitle* *screen* *revisionid* *responsibleParty* *repsep* *publisher* *pt* *propvalue* *proptype* *prognum* *prodname* *printlocation* *pre* *postalcode* *platform* *person* *p* *otherinfo* *organizationname* *organization* *oper* *navtitle* *msgblock* *month* *middlename* *mainbooktitle* *lomTypicalLearningTime* *lomTypicalAgeRange* *lomTechRequirement* *lomStructure* *lomSemanticDensity* *lomOtherPlatformRequirements* *lomLearningResourceType* *lomInteractivityType* *lomInteractivityLevel* *lomIntendedUserRole* *lomInstallationRemarks* *lomDifficulty* *lomCoverage* *lomContext* *lomAggregationLevel* *localityname* *locality* *linktext* *linktext* *lines* *lcWorkEnvDescription* *lcValues* *lcTime* *lcTaskItem* *lcSpecChars* *lcSkills* *lcQuestionBase* *lcQuestion* *lcProcesses* *lcPlanResources* *lcPlanObjective* *lcOrgConstraints* *lcOpenAnswer* *lcObjectivesStem* *lcObjective* *lcNeeds* *lcMotivation* *lcMatchingItem* *lcLearnStrat* *lcKnowledge* *lcJtaItem* *lcItem* *lcInteractionLabel2* *lcGoals* *lcGeneralDescription* *lcGapItemDelta* *lcFeedbackIncorrect* *lcFeedbackCorrect* *lcFeedback* *lcEdLevel* *lcDelivery* *lcBackground* *lcAttitude* *lcAssessment* *lcAreaShape2* *lcAreaShape* *lcAreaCoords2* *lcAreaCoords* *lcAnswerContent* *lcAge* *lastname* *kwd* *isbn* *index-sort-as* *index-see-also* *index-see* *index-base* *howtoavoid* *honorific* *glossterm* *glossSynonym* *glossSurfaceForm* *glossShortForm* *glossProperty* *glossAcronym* *glossAbbreviation* *generationidentifier* *fragref* *foreign* *firstname* *featnum* *equation-number* *equation-block* *emailaddress* *edition* *dvrResourceSuffix* *dvrResourcePrefix* *dvrKeyscopeSuffix* *dvrKeyscopePrefix* *dthd* *dt* *delim* *ddhd* *day* *data* *country* *copyrholder* *coords* *contactnumber* *consequence* *component* *codeblock* *cmd* *change-summary* *change-started* *change-revisionid* *change-request-system* *change-request-id* *change-person* *change-organization* *change-completed* *category* *brand* *booktitlealt* *bookpartno* *booknumber* *booklibrary* *author* *alt-text* *alt* *administrativearea* *addressdetails* *xref* *xmlpi* *xmlnsname* *xmlelement* *xmlatt* *wintitle* *varname* *userinput* *uicontrol* *u* *tt* *tm* *textentity* *text* *term* *systemoutput* *synph* *sup* *sub* *sort-as* *required-cleanup* *q* *ph* *parmname* *parameterentity* *overline* *option* *numcharref* *msgph* *msgnum* *markupname* *line-through* *keyword* *indexterm* *i* *fn* *filepath* *equation-inline* *draft-comment* *codeph* *cmdname* *cite* *b* *apiname*'"/>
 	
 	<xsl:variable name="inlineContaining"
 		select="'*abstract* *body* *bodydiv* *cause* *chdesc* *chdeschd* *choice* *choption* *choptionhd* *conbody* *condition* *context* *dd* *desc* *div* *draft-comment* *entry* *equation-figure* *esttime* *example* *fig* *figgroup* *fn* *glossdef* *glossScopeNote* *glossUsage* *info* *itemgroup* *lcAnswerContent2* *lcAudience* *lcChallenge* *lcCIN* *lcClassroom* *lcClient* *lcConstraints* *lcDelivDate* *lcDownloadTime* *lcFeedback2* *lcFeedbackCorrect2* *lcFeedbackIncorrect2* *lcFileSizeLimitations* *lcGraphics* *lcHandouts* *lcInstruction* *lcInstructornote* *lcInstructornote2* *lcInteractionBase* *lcInteractionBase2* *lcIntro* *lcItem2* *lcLMS* *lcMatchingItem2* *lcModDate* *lcNextSteps* *lcNoLMS* *lcOJT* *lcOpenAnswer2* *lcPlanDescrip* *lcPlanPrereqs* *lcPlanSubject* *lcPlanTitle* *lcPlayers* *lcPrereqs* *lcQuestion2* *lcQuestionBase2* *lcResolution* *lcResources* *lcReview* *lcSecurity* *lcSummary* *lcViewers* *lcW3C* *li* *linkinfo* *lq* *note* *pd* *perscat* *perskill* *personnel* *postreq* *prereq* *propdesc* *propdeschd* *proptypehd* *propvaluehd* *refsyn* *reqcond* *reqcontp* *result* *safecond* *section* *sectiondiv* *spare* *stentry* *stepresult* *stepsection* *steps-informal* *steptroubleshooting* *stepxmp* *supequi* *supply* *tasktroubleshooting* *tutorialinfo*'"/>
@@ -45,7 +47,41 @@
 	<!-- TODO: Except for pre (including specializations), see http://docs.oasis-open.org/dita/dita/v1.3/os/part3-all-inclusive/langRef/base/pre.html -->
 	<!-- TODO: Except for lines (including specializations), see http://docs.oasis-open.org/dita/dita/v1.3/os/part3-all-inclusive/langRef/base/lines.html#lines -->
 	<xsl:template match="text()">
-		<xsl:value-of select="replace(., '(\s\s+)', ' ', 'm')" />
+		<xsl:choose>
+			<xsl:when test="ancestor::pre or ancestor::msgblock or ancestor::codeblock or ancestor::screen">
+				<xsl:copy/>
+			</xsl:when>
+			<xsl:when test="ancestor::lines">
+				<xsl:variable name="trimWhitespaceExceptLineBreak">
+					<xsl:value-of select="replace(., '[^\S\r\n]+', ' ', 'm')"/>
+				</xsl:variable>
+				<xsl:value-of select="replace($trimWhitespaceExceptLineBreak, '(\r|\n)[^\S\r\n]', '&#x0A;', 'm')"/>
+			</xsl:when>
+			<xsl:when test="not(preceding-sibling::* or preceding-sibling::text()) and not(following-sibling::* or following-sibling::text()) 
+				and parent::*[contains($mixed, concat('*', name(), '*')) and parent::*[not(contains($mixed, concat('*', name(), '*')))]]">
+				<xsl:variable name="removeLeadingAndTrailingSpaces">
+					<xsl:value-of select="replace(., '^\s+|\s+$', '', 'm')" />
+				</xsl:variable>
+				<xsl:value-of select="replace($removeLeadingAndTrailingSpaces, '(\s\s+)', ' ', 'm')" />
+			</xsl:when>
+			<xsl:when test="not(preceding-sibling::* or preceding-sibling::text()) 
+				and parent::*[contains($mixed, concat('*', name(), '*')) and parent::*[not(contains($mixed, concat('*', name(), '*')))]]">
+				<xsl:variable name="removeLeadingSpaces">
+					<xsl:value-of select="replace(.,'^\s+','','m')" />
+				</xsl:variable>
+				<xsl:value-of select="replace($removeLeadingSpaces, '(\s\s+)', ' ', 'm')" />
+			</xsl:when>
+			<xsl:when test="not(following-sibling::* or following-sibling::text()) 
+				and parent::*[contains($mixed, concat('*', name(), '*')) and parent::*[not(contains($mixed, concat('*', name(), '*')))]]">
+				<xsl:variable name="removeTrailingSpaces">
+					<xsl:value-of select="replace(., '\s+$', '', 'm')" />
+				</xsl:variable>
+				<xsl:value-of select="replace($removeTrailingSpaces, '(\s\s+)', ' ', 'm')" />
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:value-of select="replace(., '(\s\s+)', ' ', 'm')" />
+			</xsl:otherwise>
+		</xsl:choose>
 		<xsl:apply-templates select="following-sibling::node()[1]"/>
 	</xsl:template>
 	
@@ -70,9 +106,11 @@
 				</xsl:when>
 				<xsl:when
 					test="not(preceding-sibling::node()[not(self::comment() or self::processing-instruction())][1][self::text() or contains($inlineWithImage, concat('*', name(), '*'))])">
-					<p>
-						<xsl:call-template name="nextInlineInP"/>
-					</p>
+					<xsl:if test="not(self::text()) or (self::text() and normalize-space(.)!='')">
+						<p>
+							<xsl:call-template name="nextInlineInP"/>
+						</p>
+					</xsl:if>
 				</xsl:when>
 			</xsl:choose>
 		</xsl:for-each>
@@ -114,6 +152,44 @@
 					<xsl:apply-templates select="@* | node()[1]"/>
 				</xsl:element>
 			</xsl:when>
+			<xsl:when test="self::text()">
+				<xsl:choose>
+					<xsl:when test="ancestor::pre or ancestor::msgblock or ancestor::codeblock or ancestor::screen">
+						<xsl:copy/>
+					</xsl:when>
+					<xsl:when test="ancestor::lines">
+						<xsl:variable name="trimWhitespaceExceptLineBreak">
+							<xsl:value-of select="replace(., '[^\S\r\n]+', ' ', 'm')"/>
+						</xsl:variable>
+						<xsl:value-of select="replace($trimWhitespaceExceptLineBreak, '(\r|\n)[^\S\r\n]', '&#x0A;', 'm')"/>
+					</xsl:when>
+					<xsl:when test="not(preceding-sibling::*) 
+						and not(preceding-sibling::text()) and not(following-sibling::*) 
+						and not(following-sibling::text())">
+						<xsl:variable name="removeLeadingAndTrailingSpaces">
+							<xsl:value-of select="replace(., '^\s+|\s+$', '', 'm')" />
+						</xsl:variable>
+						<xsl:value-of select="replace($removeLeadingAndTrailingSpaces, '(\s\s+)', ' ', 'm')" />
+					</xsl:when>
+					<xsl:when test="not(preceding-sibling::*) 
+						and not(preceding-sibling::text())">
+						<xsl:variable name="removeLeadingSpaces">
+							<xsl:value-of select="replace(.,'^\s+','')" />
+						</xsl:variable>
+						<xsl:value-of select="replace($removeLeadingSpaces, '(\s\s+)', ' ', 'm')" />
+					</xsl:when>
+					<xsl:when test="not(following-sibling::*) 
+						and not(following-sibling::text())">
+						<xsl:variable name="removeTrailingSpaces">
+							<xsl:value-of select="replace(., '\s+$', '', 'm')" />
+						</xsl:variable>
+						<xsl:value-of select="replace($removeTrailingSpaces, '(\s\s+)', ' ', 'm')" />
+					</xsl:when>
+					<xsl:otherwise>
+						<xsl:value-of select="replace(., '(\s\s+)', ' ', 'm')" />
+					</xsl:otherwise>
+				</xsl:choose>
+			</xsl:when>
 			<xsl:otherwise>
 				<xsl:copy/>
 			</xsl:otherwise>
@@ -137,6 +213,40 @@
 				<xsl:element name="{local-name()}">
 					<xsl:apply-templates select="@* | node()[1]"/>
 				</xsl:element>
+			</xsl:when>
+			<xsl:when test="self::text()">
+				<xsl:choose>
+					<xsl:when test="ancestor::pre or ancestor::msgblock or ancestor::codeblock or ancestor::screen">
+						<xsl:copy/>
+					</xsl:when>
+					<xsl:when test="ancestor::lines">
+						<xsl:variable name="trimWhitespaceExceptLineBreak">
+							<xsl:value-of select="replace(., '[^\S\r\n]+', ' ', 'm')"/>
+						</xsl:variable>
+						<xsl:value-of select="replace($trimWhitespaceExceptLineBreak, '(\r|\n)[^\S\r\n]', '&#x0A;', 'm')"/>
+					</xsl:when>
+					<xsl:when test="not(preceding-sibling::node()[not(self::comment() or self::processing-instruction())][1][self::text() or self::*[not(contains($block, concat('*', name(), '*')))]]) and not(following-sibling::node()[not(self::comment() or self::processing-instruction())][1][self::text() or self::*[not(contains($block, concat('*', name(), '*')))]])">
+						<xsl:variable name="removeLeadingAndTrailingSpaces">
+							<xsl:value-of select="replace(., '^\s+|\s+$', '', 'm')" />
+						</xsl:variable>
+						<xsl:value-of select="replace($removeLeadingAndTrailingSpaces, '(\s\s+)', ' ', 'm')" />
+					</xsl:when>
+					<xsl:when test="not(preceding-sibling::node()[not(self::comment() or self::processing-instruction())][1][self::text() or self::*[not(contains($block, concat('*', name(), '*')))]])">
+						<xsl:variable name="removeLeadingSpaces">
+							<xsl:value-of select="replace(.,'^\s+','')" />
+						</xsl:variable>
+						<xsl:value-of select="replace($removeLeadingSpaces, '(\s\s+)', ' ', 'm')" />
+					</xsl:when>
+					<xsl:when test="not(following-sibling::node()[not(self::comment() or self::processing-instruction())][1][self::text() or self::*[not(contains($block, concat('*', name(), '*')))]])">
+						<xsl:variable name="removeTrailingSpaces">
+							<xsl:value-of select="replace(., '\s+$', '', 'm')" />
+						</xsl:variable>
+						<xsl:value-of select="replace($removeTrailingSpaces, '(\s\s+)', ' ', 'm')" />
+					</xsl:when>
+					<xsl:otherwise>
+						<xsl:value-of select="replace(., '(\s\s+)', ' ', 'm')" />
+					</xsl:otherwise>
+				</xsl:choose>
 			</xsl:when>
 			<xsl:otherwise>
 				<xsl:copy/>

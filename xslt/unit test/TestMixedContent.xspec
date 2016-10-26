@@ -48,7 +48,7 @@
 				<note>
 					<p>a note that was contained by a p element</p>
 				</note>
-				<p> paragraph after note</p>
+				<p>paragraph after note</p>
 				<note><p>this is the next note</p></note>
 			</body>
 		</x:expect>
@@ -67,7 +67,7 @@
 				<note>
 					<p>a note that was contained by a p element</p>
 				</note>
-				<p> paragraph<!-- comment 4 --> after note</p>
+				<p>paragraph<!-- comment 4 --> after note</p>
 				<note><p>this is the next note</p></note>
 				<!-- comment 5 -->
 			</body>
@@ -99,7 +99,7 @@
 			<body>
 				<p>tekst<b>bold</b><image href="test.png"/> tekst <image href="test.png"/> </p>
 				<note><p>a note</p></note>
-				<p> tekst <image href="test.png"/></p>
+				<p>tekst <image href="test.png"/></p>
 			</body>
 		</x:expect>
 	</x:scenario>
