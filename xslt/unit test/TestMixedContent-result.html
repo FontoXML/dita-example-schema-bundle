@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?><html xmlns:test="http://www.jenitennison.com/xslt/unit-test" xmlns="http://www.w3.org/1999/xhtml">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-      <title>Test Report for C:/Users/Eva/FontoXML/fontoxml-dita-ot-plugin-standard-schema/xslt/xsltMixedContent.xsl (passed:10 / pending:0 / failed:0 / total:10)</title>
+      <title>Test Report for C:/Users/Eva/FontoXML/fontoxml-dita-ot-plugin-standard-schema/xslt/xsltMixedContent.xsl (passed:14 / pending:0 / failed:0 / total:14)</title>
       <link rel="stylesheet" type="text/css" href="file:/C:/Program%20Files/Oxygen%20XML%20Developer%2018/frameworks/xspec/src/reporter/test-report.css" />
    </head>
    <body>
       <h1>Test Report</h1>
       <p xmlns:oxy="http://www.oxygenxml.com/xslt/xspec">Stylesheet: <a href="file:/C:/Users/Eva/FontoXML/fontoxml-dita-ot-plugin-standard-schema/xslt/xsltMixedContent.xsl">C:/Users/Eva/FontoXML/fontoxml-dita-ot-plugin-standard-schema/xslt/xsltMixedContent.xsl</a></p>
-      <p xmlns:oxy="http://www.oxygenxml.com/xslt/xspec">Tested: 26 October 2016 at 12:44</p>
+      <p xmlns:oxy="http://www.oxygenxml.com/xslt/xspec">Tested: 26 October 2016 at 13:19</p>
       <h2 xmlns:oxy="http://www.oxygenxml.com/xslt/xspec">Contents</h2>
       <table xmlns:oxy="http://www.oxygenxml.com/xslt/xspec" class="xspec">
          <col width="80%" />
@@ -18,10 +18,10 @@
          <thead>
             <tr>
                <th></th>
-               <th class="result">passed:10</th>
+               <th class="result">passed:14</th>
                <th class="result">pending:0</th>
                <th class="result">failed:0</th>
-               <th class="result">total:10</th>
+               <th class="result">total:14</th>
             </tr>
          </thead>
          <tbody>
@@ -90,6 +90,34 @@
             </tr>
             <tr class="successful">
                <th><a href="#d4e681">When there is an image and text in the note</a></th>
+               <th class="result">1</th>
+               <th class="result">0</th>
+               <th class="result">0</th>
+               <th class="result">1</th>
+            </tr>
+            <tr class="successful">
+               <th><a href="#d4e738">leading and trailing spaces in sli</a></th>
+               <th class="result">1</th>
+               <th class="result">0</th>
+               <th class="result">0</th>
+               <th class="result">1</th>
+            </tr>
+            <tr class="successful">
+               <th><a href="#d4e796">leading and trailing spaces in note</a></th>
+               <th class="result">1</th>
+               <th class="result">0</th>
+               <th class="result">0</th>
+               <th class="result">1</th>
+            </tr>
+            <tr class="successful">
+               <th><a href="#d4e874">leading and trailing spaces in p</a></th>
+               <th class="result">1</th>
+               <th class="result">0</th>
+               <th class="result">0</th>
+               <th class="result">1</th>
+            </tr>
+            <tr class="successful">
+               <th><a href="#d4e943">Spaces in lines</a></th>
                <th class="result">1</th>
                <th class="result">0</th>
                <th class="result">0</th>
@@ -262,6 +290,74 @@
                </tr>
                <tr class="successful">
                   <td>Nothing should happen</td>
+                  <td>Success</td>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+      <div xmlns:oxy="http://www.oxygenxml.com/xslt/xspec" id="d4e738">
+         <h2 class="successful">leading and trailing spaces in sli<span class="scenario-totals">passed:1 / pending:0 / failed:0 / total:1</span></h2>
+         <table class="xspec" id="t-d4e738">
+            <col width="80%" />
+            <col width="20%" />
+            <tbody>
+               <tr class="successful">
+                  <th>leading and trailing spaces in sli</th>
+                  <th>passed:1 / pending:0 / failed:0 / total:1</th>
+               </tr>
+               <tr class="successful">
+                  <td>leading and trailing spaces are gone</td>
+                  <td>Success</td>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+      <div xmlns:oxy="http://www.oxygenxml.com/xslt/xspec" id="d4e796">
+         <h2 class="successful">leading and trailing spaces in note<span class="scenario-totals">passed:1 / pending:0 / failed:0 / total:1</span></h2>
+         <table class="xspec" id="t-d4e796">
+            <col width="80%" />
+            <col width="20%" />
+            <tbody>
+               <tr class="successful">
+                  <th>leading and trailing spaces in note</th>
+                  <th>passed:1 / pending:0 / failed:0 / total:1</th>
+               </tr>
+               <tr class="successful">
+                  <td>leading and trailing spaces are gone and text is wrapped in paragraphs</td>
+                  <td>Success</td>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+      <div xmlns:oxy="http://www.oxygenxml.com/xslt/xspec" id="d4e874">
+         <h2 class="successful">leading and trailing spaces in p<span class="scenario-totals">passed:1 / pending:0 / failed:0 / total:1</span></h2>
+         <table class="xspec" id="t-d4e874">
+            <col width="80%" />
+            <col width="20%" />
+            <tbody>
+               <tr class="successful">
+                  <th>leading and trailing spaces in p</th>
+                  <th>passed:1 / pending:0 / failed:0 / total:1</th>
+               </tr>
+               <tr class="successful">
+                  <td>leading and trailing spaces are gone and text is wrapped in paragraphs</td>
+                  <td>Success</td>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+      <div xmlns:oxy="http://www.oxygenxml.com/xslt/xspec" id="d4e943">
+         <h2 class="successful">Spaces in lines<span class="scenario-totals">passed:1 / pending:0 / failed:0 / total:1</span></h2>
+         <table class="xspec" id="t-d4e943">
+            <col width="80%" />
+            <col width="20%" />
+            <tbody>
+               <tr class="successful">
+                  <th>Spaces in lines</th>
+                  <th>passed:1 / pending:0 / failed:0 / total:1</th>
+               </tr>
+               <tr class="successful">
+                  <td>only the line breaks are preserved</td>
                   <td>Success</td>
                </tr>
             </tbody>

@@ -15,7 +15,7 @@
 		<x:expect label="Text and inline elements are wrapped in a p element">
 			<body>
 				<ul>
-					<li><p>text </p><p>paragraf</p><p> text <b>bold text</b> text</p></li>
+					<li><p>text</p><p>paragraf</p><p>text <b>bold text</b> text</p></li>
 				</ul>
 			</body>
 		</x:expect>
@@ -31,7 +31,7 @@
 		<x:expect label="Text and inline elements are wrapped in a p element">
 			<body>
 				<ul>
-					<li><!-- comment 1 --><p>text </p><!-- comment 2 --><p>paragraf</p><!-- comment 3 --><p> text <!-- comment 4 --><b>bold text</b><!-- comment 5 --> text</p><!-- comment 6 --></li>
+					<li><!-- comment 1 --><p>text</p><!-- comment 2 --><p>paragraf</p><!-- comment 3 --><p>text <!-- comment 4 --><b>bold text</b><!-- comment 5 --> text</p><!-- comment 6 --></li>
 				</ul>
 			</body>
 		</x:expect>
@@ -121,6 +121,84 @@
 		</x:context>
 		<x:expect label="Nothing should happen">
 			<note><p>tekst</p><image href="test.png"/><p><b>bold</b> tekst</p></note>
+		</x:expect>
+	</x:scenario>
+	<x:scenario label="leading and trailing spaces in sli">
+		<x:context>
+			<sl>
+				<sli>
+					leading space 	
+					<b>trailing space</b>
+				</sli>
+				<sli>
+					leading and 	trailing space
+				</sli>
+			</sl>
+		</x:context>
+		<x:expect label="leading and trailing spaces are gone">
+			<sl>
+				<sli>leading space <b>trailing space</b></sli>
+				<sli>leading and trailing space</sli>
+			</sl>
+		</x:expect>
+	</x:scenario>
+	<x:scenario label="leading and trailing spaces in note">
+		<x:context>
+			<body>
+				<note>
+					leading and trailing space
+					<p> a paragraph</p>
+					<b>leading space</b>  <b>and</b> trailing space
+				</note>
+			</body>
+		</x:context>
+		<x:expect label="leading and trailing spaces are gone and text is wrapped in paragraphs">
+			<body>
+				<note>
+					<p>leading and trailing space</p>
+					<p>a paragraph</p>
+					<p><b>leading space</b> <b>and</b> trailing space</p>
+				</note>
+			</body>
+		</x:expect>
+	</x:scenario>
+	<x:scenario label="leading and trailing spaces in p">
+		<x:context>
+			<body>
+				<p>
+					leading and trailing space
+					<note> a paragraph</note>
+					<b>leading space</b>  
+					and trailing space
+				</p>
+			</body>
+		</x:context>
+		<x:expect label="leading and trailing spaces are gone and text is wrapped in paragraphs">
+			<body>
+				<p>leading and trailing space</p>
+				<note>
+					<p>a paragraph</p>
+				</note>
+				<p><b>leading space</b> and trailing space</p>
+			</body>
+		</x:expect>
+	</x:scenario>
+	<x:scenario label="Spaces in lines">
+		<x:context>
+			<lines>
+				text		space 
+				enter	
+
+enter
+			text</lines>
+		</x:context>
+		<x:expect label="only the line breaks are preserved">
+			<lines>
+text space
+enter
+
+enter
+text</lines>
 		</x:expect>
 	</x:scenario>
 </x:description>

@@ -55,7 +55,7 @@
 				<xsl:variable name="trimWhitespaceExceptLineBreak">
 					<xsl:value-of select="replace(., '[^\S\r\n]+', ' ', 'm')"/>
 				</xsl:variable>
-				<xsl:value-of select="replace($trimWhitespaceExceptLineBreak, '(\r|\n)[^\S\r\n]', '&#x0A;', 'm')"/>
+				<xsl:value-of select="replace($trimWhitespaceExceptLineBreak, '[^\S\r\n](\r|\n)[^\S\r\n]|(\r|\n)[^\S\r\n]|[^\S\r\n](\r|\n)', '&#x0A;', 'm')"/>
 			</xsl:when>
 			<xsl:when test="not(preceding-sibling::* or preceding-sibling::text()) and not(following-sibling::* or following-sibling::text()) 
 				and parent::*[contains($mixed, concat('*', name(), '*')) and parent::*[not(contains($mixed, concat('*', name(), '*')))]]">
@@ -161,25 +161,21 @@
 						<xsl:variable name="trimWhitespaceExceptLineBreak">
 							<xsl:value-of select="replace(., '[^\S\r\n]+', ' ', 'm')"/>
 						</xsl:variable>
-						<xsl:value-of select="replace($trimWhitespaceExceptLineBreak, '(\r|\n)[^\S\r\n]', '&#x0A;', 'm')"/>
+						<xsl:value-of select="replace($trimWhitespaceExceptLineBreak, '[^\S\r\n](\r|\n)[^\S\r\n]|(\r|\n)[^\S\r\n]|[^\S\r\n](\r|\n)', '&#x0A;', 'm')"/>
 					</xsl:when>
-					<xsl:when test="not(preceding-sibling::*) 
-						and not(preceding-sibling::text()) and not(following-sibling::*) 
-						and not(following-sibling::text())">
+					<xsl:when test="not(preceding-sibling::node()[not(self::comment() or self::processing-instruction())][1][self::text() or self::*[contains($inline, concat('*', name(), '*'))]]) and not(following-sibling::node()[not(self::comment() or self::processing-instruction())][1][self::text() or self::*[contains($inline, concat('*', name(), '*'))]])">
 						<xsl:variable name="removeLeadingAndTrailingSpaces">
 							<xsl:value-of select="replace(., '^\s+|\s+$', '', 'm')" />
 						</xsl:variable>
 						<xsl:value-of select="replace($removeLeadingAndTrailingSpaces, '(\s\s+)', ' ', 'm')" />
 					</xsl:when>
-					<xsl:when test="not(preceding-sibling::*) 
-						and not(preceding-sibling::text())">
+					<xsl:when test="not(preceding-sibling::node()[not(self::comment() or self::processing-instruction())][1][self::text() or self::*[contains($inline, concat('*', name(), '*'))]])">
 						<xsl:variable name="removeLeadingSpaces">
 							<xsl:value-of select="replace(.,'^\s+','')" />
 						</xsl:variable>
 						<xsl:value-of select="replace($removeLeadingSpaces, '(\s\s+)', ' ', 'm')" />
 					</xsl:when>
-					<xsl:when test="not(following-sibling::*) 
-						and not(following-sibling::text())">
+					<xsl:when test="not(following-sibling::node()[not(self::comment() or self::processing-instruction())][1][self::text() or self::*[contains($inline, concat('*', name(), '*'))]])">
 						<xsl:variable name="removeTrailingSpaces">
 							<xsl:value-of select="replace(., '\s+$', '', 'm')" />
 						</xsl:variable>
@@ -223,7 +219,7 @@
 						<xsl:variable name="trimWhitespaceExceptLineBreak">
 							<xsl:value-of select="replace(., '[^\S\r\n]+', ' ', 'm')"/>
 						</xsl:variable>
-						<xsl:value-of select="replace($trimWhitespaceExceptLineBreak, '(\r|\n)[^\S\r\n]', '&#x0A;', 'm')"/>
+						<xsl:value-of select="replace($trimWhitespaceExceptLineBreak, '[^\S\r\n](\r|\n)[^\S\r\n]|(\r|\n)[^\S\r\n]|[^\S\r\n](\r|\n)', '&#x0A;', 'm')"/>
 					</xsl:when>
 					<xsl:when test="not(preceding-sibling::node()[not(self::comment() or self::processing-instruction())][1][self::text() or self::*[not(contains($block, concat('*', name(), '*')))]]) and not(following-sibling::node()[not(self::comment() or self::processing-instruction())][1][self::text() or self::*[not(contains($block, concat('*', name(), '*')))]])">
 						<xsl:variable name="removeLeadingAndTrailingSpaces">
