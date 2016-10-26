@@ -201,4 +201,40 @@ enter
 text</lines>
 		</x:expect>
 	</x:scenario>
+	<x:scenario label="image is the only element in a paragraph">
+		<x:context>
+			<body>
+				<p><!-- comment --><image href="test.png"/></p>
+				<p>
+					<image href="test.png"/>
+				</p>
+				<p><image href="test.png"/>stays an paragraph</p>
+			</body>
+		</x:context>
+		<x:expect label="only the first two paragraphs are unwrapped">
+			<body>
+				<!-- comment --><image href="test.png"/>
+				<image href="test.png"/>
+				<p><image href="test.png"/>stays an paragraph</p>
+			</body>
+		</x:expect>
+	</x:scenario>
+	<x:scenario label="image is the only element in a paragraph">
+		<x:context>
+			<body>
+				<p>
+					<image href="test.png"/>
+					<note>a note</note>
+					<!-- comment --><image href="test.png"/>
+				</p>
+			</body>
+		</x:context>
+		<x:expect label="only the first paragraph is unwrapped">
+			<body>
+				<image href="test.png"/>
+				<note><p>a note</p></note>
+				<!-- comment --><image href="test.png"/>
+			</body>
+		</x:expect>
+	</x:scenario>
 </x:description>

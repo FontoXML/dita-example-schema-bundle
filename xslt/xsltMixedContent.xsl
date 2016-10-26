@@ -6,7 +6,6 @@
 	<xsl:strip-space elements="*"/>
 	
 	<!-- Except in all elements with mixed content -->
-	<!-- TODO: should contain all elements which are mixed content after the contraints -->
 	<xsl:preserve-space elements="data unknown foreign title navtitle desc p note lq q sli li itemgroup dthd ddhd dt dd pre lines div text keyword term ph tm alt stentry draft-comment required-cleanup fn indexterm index-base cite xref dvrResourcePrefix dvrResourceSuffix dvrKeyscopePrefix dvrKeyscopeSuffix typeofhazard consequence howtoavoid b u i line-through overline tt sup sub index-see index-see-also index-sort-as shortdesc linktext searchtitle author source publisher copyrholder category prodname brand series platform prognum featnum component entry searchtitle shortdesc abstract bodydiv section sectiondiv example linktext linkinfo shape coords sort-as person organization summary printlocation revisionid year month day bookpartno edition isbn booknumber volume booklibrary mainbooktitle booktitlealt alt-text lcInstructornote2 lcQuestion2 lcOpenAnswer2 lcFeedback2 lcFeedbackCorrect2 lcFeedbackIncorrect2 lcAnswerContent2 lcItem2 lcMatchingItem2 lcAreaShape2 lcAreaCoords2 lcIntro lcObjectivesStem lcObjective lcAudience lcTime lcPrereqs lcSummary lcNextSteps lcReview lcResources lcChallenge lcInstruction lcInstructornote lcQuestion lcOpenAnswer lcFeedback lcFeedbackCorrect lcFeedbackIncorrect lcAnswerContent lcItem lcMatchingItem lcAreaShape lcAreaCoords lcInteractionLabel2 lcQuestionBase2 lcQuestionBase lomStructure lomCoverage lomAggregationLevel lomTechRequirement lomInstallationRemarks lomOtherPlatformRequirements lomInteractivityType lomLearningResourceType lomInteractivityLevel lomSemanticDensity lomIntendedUserRole lomContext lomTypicalAgeRange lomDifficulty lomTypicalLearningTime lcGeneralDescription lcGoals lcNeeds lcValues lcOrgConstraints lcEdLevel lcAge lcBackground lcSkills lcKnowledge lcMotivation lcSpecChars lcWorkEnvDescription lcPlanResources lcProcesses lcTaskItem lcAttitude lcPlanObjective lcJtaItem lcGapItemDelta lcLearnStrat lcAssessment lcDelivery equation-inline equation-block equation-number glossterm glossdef glossAbbreviation glossAcronym glossShortForm glossSynonym glossProperty glossSurfaceForm glossUsage glossScopeNote markupname codeph codeblock option var parmname synph oper delim sep apiname pt pd fragref synnote repsep kwd refsyn proptypehd propvaluehd propdeschd proptype propvalue propdesc change-person change-organization change-revisionid change-request-system change-request-id change-started change-completed change-summary msgph msgblock msgnum cmdname varname filepath userinput systemoutput prereq context steps-informal stepsection cmd info tutorialinfo stepxmp choice choptionhd chdeschd choption chdesc stepresult steptroubleshooting tasktroubleshooting result postreq reqcond reqcontp personnel perscat perskill esttime supequi supply spare safecond responsibleParty uicontrol wintitle shortcut screen numcharref parameterentity textentity xmlatt xmlelement xmlnsname xmlpi organizationname honorific firstname middlename lastname generationidentifier otherinfo addressdetails locality localityname administrativearea thoroughfare postalcode country contactnumber emailaddress url" />
 	
 	<xsl:variable name="mixed" select="'*year* *volume* *var* *url* *unknown* *typeofhazard* *title* *thoroughfare* *synnote* *summary* *source* *sli* *shortdesc* *shortdesc* *shortcut* *shape* *series* *sep* *searchtitle* *searchtitle* *screen* *revisionid* *responsibleParty* *repsep* *publisher* *pt* *propvalue* *proptype* *prognum* *prodname* *printlocation* *pre* *postalcode* *platform* *person* *p* *otherinfo* *organizationname* *organization* *oper* *navtitle* *msgblock* *month* *middlename* *mainbooktitle* *lomTypicalLearningTime* *lomTypicalAgeRange* *lomTechRequirement* *lomStructure* *lomSemanticDensity* *lomOtherPlatformRequirements* *lomLearningResourceType* *lomInteractivityType* *lomInteractivityLevel* *lomIntendedUserRole* *lomInstallationRemarks* *lomDifficulty* *lomCoverage* *lomContext* *lomAggregationLevel* *localityname* *locality* *linktext* *linktext* *lines* *lcWorkEnvDescription* *lcValues* *lcTime* *lcTaskItem* *lcSpecChars* *lcSkills* *lcQuestionBase* *lcQuestion* *lcProcesses* *lcPlanResources* *lcPlanObjective* *lcOrgConstraints* *lcOpenAnswer* *lcObjectivesStem* *lcObjective* *lcNeeds* *lcMotivation* *lcMatchingItem* *lcLearnStrat* *lcKnowledge* *lcJtaItem* *lcItem* *lcInteractionLabel2* *lcGoals* *lcGeneralDescription* *lcGapItemDelta* *lcFeedbackIncorrect* *lcFeedbackCorrect* *lcFeedback* *lcEdLevel* *lcDelivery* *lcBackground* *lcAttitude* *lcAssessment* *lcAreaShape2* *lcAreaShape* *lcAreaCoords2* *lcAreaCoords* *lcAnswerContent* *lcAge* *lastname* *kwd* *isbn* *index-sort-as* *index-see-also* *index-see* *index-base* *howtoavoid* *honorific* *glossterm* *glossSynonym* *glossSurfaceForm* *glossShortForm* *glossProperty* *glossAcronym* *glossAbbreviation* *generationidentifier* *fragref* *foreign* *firstname* *featnum* *equation-number* *equation-block* *emailaddress* *edition* *dvrResourceSuffix* *dvrResourcePrefix* *dvrKeyscopeSuffix* *dvrKeyscopePrefix* *dthd* *dt* *delim* *ddhd* *day* *data* *country* *copyrholder* *coords* *contactnumber* *consequence* *component* *codeblock* *cmd* *change-summary* *change-started* *change-revisionid* *change-request-system* *change-request-id* *change-person* *change-organization* *change-completed* *category* *brand* *booktitlealt* *bookpartno* *booknumber* *booklibrary* *author* *alt-text* *alt* *administrativearea* *addressdetails* *xref* *xmlpi* *xmlnsname* *xmlelement* *xmlatt* *wintitle* *varname* *userinput* *uicontrol* *u* *tt* *tm* *textentity* *text* *term* *systemoutput* *synph* *sup* *sub* *sort-as* *required-cleanup* *q* *ph* *parmname* *parameterentity* *overline* *option* *numcharref* *msgph* *msgnum* *markupname* *line-through* *keyword* *indexterm* *i* *fn* *filepath* *equation-inline* *draft-comment* *codeph* *cmdname* *cite* *b* *apiname*'"/>
@@ -44,8 +43,6 @@
 	</xsl:template>
 	
 	<!-- By default collapse to consecutive whitespace characters to a single space -->
-	<!-- TODO: Except for pre (including specializations), see http://docs.oasis-open.org/dita/dita/v1.3/os/part3-all-inclusive/langRef/base/pre.html -->
-	<!-- TODO: Except for lines (including specializations), see http://docs.oasis-open.org/dita/dita/v1.3/os/part3-all-inclusive/langRef/base/lines.html#lines -->
 	<xsl:template match="text()">
 		<xsl:choose>
 			<xsl:when test="ancestor::pre or ancestor::msgblock or ancestor::codeblock or ancestor::screen">
@@ -90,6 +87,11 @@
 		<xsl:apply-templates select="following-sibling::node()[1]"/>
 	</xsl:template>
 	
+	<xsl:template match="p[not(child::*[not(self::image)]) and count(child::image)=1 and not(child::text()[normalize-space(.)!=''])]">
+		<xsl:apply-templates select="node()[1]"/>
+		<xsl:apply-templates select="following-sibling::node()[1]"/>
+	</xsl:template>
+	
 	<xsl:template match="p[*[contains($block, concat('*', name(), '*'))]]">
 		<xsl:for-each select="child::node()">
 			<xsl:choose>
@@ -107,9 +109,19 @@
 				<xsl:when
 					test="not(preceding-sibling::node()[not(self::comment() or self::processing-instruction())][1][self::text() or contains($inlineWithImage, concat('*', name(), '*'))])">
 					<xsl:if test="not(self::text()) or (self::text() and normalize-space(.)!='')">
-						<p>
-							<xsl:call-template name="nextInlineInP"/>
-						</p>
+						<xsl:variable name="paragraph">
+							<p>
+								<xsl:call-template name="nextInlineInP"/>
+							</p>
+						</xsl:variable>
+						<xsl:choose>
+							<xsl:when test="$paragraph/p[not(child::*[not(self::image)]) and count(child::image)=1 and not(child::text()[normalize-space(.)!=''])]">
+								<xsl:apply-templates select="$paragraph/p/node()[1]"/>
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:copy-of select="$paragraph"/>
+							</xsl:otherwise>
+						</xsl:choose>
 					</xsl:if>
 				</xsl:when>
 			</xsl:choose>

@@ -5,7 +5,7 @@
 	<title>Full file test</title>
 	<body>
 		<p><draft-comment><p>Test draft comment in body</p></draft-comment></p>
-		<p><image href="test.png"/></p>
+		<image href="test.png"/>
 		<note><p>A note</p></note>
 	</body>
 </topic>
