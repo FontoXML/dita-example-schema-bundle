@@ -3,5 +3,12 @@
 <?test test="node before root node"?>
 <topic id="a" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:fontoxml:names:tc:dita:xsd:topic.xsd:1.3">
 	<title>Full file test</title>
-	<body><draft-comment>Test draft comment in body</draft-comment><p id="b"><image href="test.png"/><note>A note</note></p></body>
+	<body>
+		<draft-comment>Test draft comment in body</draft-comment>
+		<p id="b"><image href="test.png"/><note>A note</note></p>
+		<section>
+			   <p>paragraph in the section</p>
+			  <!-- comment -->  <p>second paragraph in the section</p>
+		</section>
+	</body>
 </topic>

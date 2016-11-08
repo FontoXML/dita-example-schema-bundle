@@ -7,5 +7,9 @@
 		<p><draft-comment><p>Test draft comment in body</p></draft-comment></p>
 		<image href="test.png"/>
 		<note><p>A note</p></note>
+		<section>
+			<p>paragraph in the section</p>
+			<!-- comment --><p>second paragraph in the section</p>
+		</section>
 	</body>
 </topic>

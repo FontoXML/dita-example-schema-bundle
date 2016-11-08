@@ -133,9 +133,19 @@
 	
 	<xsl:template
 		match="*[contains($inlineContaining, concat('*', name(), '*'))]/*[contains($inline, concat('*', name(), '*'))] | *[contains($inlineContaining, concat('*', name(), '*'))]/text()">
-		<p>
-			<xsl:call-template name="nextInline"/>
-		</p>
+		<xsl:variable name="paragraph">
+			<p>
+				<xsl:call-template name="nextInline"/>
+			</p>
+		</xsl:variable>
+		<xsl:choose>
+			<xsl:when test="$paragraph/p/node()[self::text() or self::*]">
+				<xsl:copy-of select="$paragraph"/>
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:apply-templates select="$paragraph/p/node()[1]"/>
+			</xsl:otherwise>
+		</xsl:choose>
 		<xsl:choose>
 			<xsl:when
 				test="following-sibling::node()[not(self::text() or self::comment() or self::processing-instruction() or contains($inline, concat('*', name(), '*')))][1][preceding-sibling::node()[1][self::comment() or self::processing-instruction()]]">
