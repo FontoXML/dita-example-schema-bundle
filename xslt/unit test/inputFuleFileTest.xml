@@ -7,8 +7,11 @@
 		<draft-comment>Test draft comment in body</draft-comment>
 		<p id="b"><image href="test.png"/><note>A note</note></p>
 		<section>
-			   <p>paragraph in the section</p>
+			<p>paragraph <note>note</note><mathml><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mn>25</mml:mn></mml:math></mathml> in the section</p>
 			  <!-- comment -->  <p>second paragraph in the section</p>
+			<equation-figure>
+				<mathml id="id-eb1efcbf-ae10-40cf-96c5-8bf6370ae8ce"><mathml:math xmlns:mathml="http://www.w3.org/1998/Math/MathML"><mathml:mn>25</mathml:mn></mathml:math></mathml>
+			</equation-figure>
 		</section>
 	</body>
 </topic>

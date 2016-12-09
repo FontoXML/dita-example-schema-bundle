@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:mathml="http://www.w3.org/1998/Math/MathML" xmlns:svg="http://www.w3.org/2000/svg" exclude-result-prefixes="mathml svg">
 	<xsl:output method="xml" encoding="utf-8"/>
 	
 	<!-- Strip whitespace in all elements -->
@@ -14,10 +14,10 @@
 		select="'*abstract* *body* *bodydiv* *cause* *chdesc* *chdeschd* *choice* *choption* *choptionhd* *conbody* *condition* *context* *dd* *desc* *div* *draft-comment* *entry* *equation-figure* *esttime* *example* *fig* *figgroup* *fn* *glossdef* *glossScopeNote* *glossUsage* *info* *itemgroup* *lcAnswerContent2* *lcAudience* *lcChallenge* *lcCIN* *lcClassroom* *lcClient* *lcConstraints* *lcDelivDate* *lcDownloadTime* *lcFeedback2* *lcFeedbackCorrect2* *lcFeedbackIncorrect2* *lcFileSizeLimitations* *lcGraphics* *lcHandouts* *lcInstruction* *lcInstructornote* *lcInstructornote2* *lcInteractionBase* *lcInteractionBase2* *lcIntro* *lcItem2* *lcLMS* *lcMatchingItem2* *lcModDate* *lcNextSteps* *lcNoLMS* *lcOJT* *lcOpenAnswer2* *lcPlanDescrip* *lcPlanPrereqs* *lcPlanSubject* *lcPlanTitle* *lcPlayers* *lcPrereqs* *lcQuestion2* *lcQuestionBase2* *lcResolution* *lcResources* *lcReview* *lcSecurity* *lcSummary* *lcViewers* *lcW3C* *li* *linkinfo* *lq* *note* *pd* *perscat* *perskill* *personnel* *postreq* *prereq* *propdesc* *propdeschd* *proptypehd* *propvaluehd* *refsyn* *reqcond* *reqcontp* *result* *safecond* *section* *sectiondiv* *spare* *stentry* *stepresult* *stepsection* *steps-informal* *steptroubleshooting* *stepxmp* *supequi* *supply* *tasktroubleshooting* *tutorialinfo*'"/>
 	
 	<xsl:variable name="inline"
-		select="'*abbreviated-form* *apiname* *b* *boolean* *cite* *cmdname* *codeph* *draft-comment* *equation-inline* *filepath* *fn* *i* *indexterm* *indextermref* *keyword* *line-through* *markupname* *mathml* *menucascade* *msgnum* *msgph* *numcharref* *option* *overline* *parameterentity* *parmname* *ph* *q* *required-cleanup* *sort-as* *state* *sub* *sup* *svg-container* *synph* *systemoutput* *term* *text* *textentity* *tm* *tt* *u* *uicontrol* *userinput* *varname* *wintitle* *xmlatt* *xmlelement* *xmlnsname* *xmlpi* *xref*'"/>
+		select="'*abbreviated-form* *apiname* *b* *boolean* *cite* *cmdname* *codeph* *draft-comment* *equation-inline* *filepath* *fn* *i* *indexterm* *indextermref* *keyword* *line-through* *markupname* *menucascade* *msgnum* *msgph* *numcharref* *option* *overline* *parameterentity* *parmname* *ph* *q* *required-cleanup* *sort-as* *state* *sub* *sup* *svg-container* *synph* *systemoutput* *term* *text* *textentity* *tm* *tt* *u* *uicontrol* *userinput* *varname* *wintitle* *xmlatt* *xmlelement* *xmlnsname* *xmlpi* *xref*'"/>
 	
 	<xsl:variable name="inlineWithImage"
-		select="'*abbreviated-form* *apiname* *b* *boolean* *cite* *cmdname* *codeph* *data* *data-about* *draft-comment* *equation-inline* *filepath* *fn* *foreign* *i* *image* *indexterm* *indextermref* *keyword* *line-through* *markupname* *mathml* *menucascade* *msgnum* *msgph* *numcharref* *option* *overline* *parameterentity* *parmname* *ph* *q* *required-cleanup* *sort-as* *state* *sub* *sup* *svg-container* *synph* *systemoutput* *term* *text* *textentity* *tm* *tt* *u* *uicontrol* *unknown* *userinput* *varname* *wintitle* *xmlatt* *xmlelement* *xmlnsname* *xmlpi* *xref*'"/>
+		select="'*abbreviated-form* *apiname* *b* *boolean* *cite* *cmdname* *codeph* *data* *data-about* *draft-comment* *equation-inline* *filepath* *fn* *foreign* *i* *image* *indexterm* *indextermref* *keyword* *line-through* *markupname* *menucascade* *msgnum* *msgph* *numcharref* *option* *overline* *parameterentity* *parmname* *ph* *q* *required-cleanup* *sort-as* *state* *sub* *sup* *svg-container* *synph* *systemoutput* *term* *text* *textentity* *tm* *tt* *u* *uicontrol* *unknown* *userinput* *varname* *wintitle* *xmlatt* *xmlelement* *xmlnsname* *xmlpi* *xref* *mathml*'"/>
 	
 	<xsl:variable name="block"
 		select="'*dl* *div* *fig* *lines* *lq* *note* *object* *ol* *pre* *simpletable* *sl* *table* *ul* *parml* *equation-block* *lcTrueFalse2* *lcSingleSelect2* *lcMultipleSelect2* *lcSequencing2* *lcMatching2* *lcHotspot2* *lcOpenQuestion2* *lcInteractionBase2* *imagemap* *syntaxdiagram* *equation-figure* *lcTrueFalse* *lcSingleSelect* *lcMultipleSelect* *lcSequencing* *lcMatching* *lcHotspot* *lcOpenQuestion* *lcInteractionBase* *hazardstatement* *lcInstructornote* *lcInstructornote2* *codeblock* *msgblock* *screen*'"/> <!-- image -->
@@ -29,9 +29,23 @@
 	</xsl:template>
 	
 	<xsl:template match="*">
-		<xsl:element name="{local-name()}">
-			<xsl:apply-templates select="@* | node()[1]"/>
-		</xsl:element>
+		<xsl:choose>
+			<xsl:when test="namespace-uri() = 'http://www.w3.org/1998/Math/MathML'">
+				<xsl:element name="mathml:{local-name()}">
+					<xsl:apply-templates select="@* | node()[1]"/>
+				</xsl:element>
+			</xsl:when>
+			<xsl:when test="namespace-uri() = 'http://www.w3.org/2000/svg'">
+				<xsl:element name="svg:{local-name()}">
+					<xsl:apply-templates select="@* | node()[1]"/>
+				</xsl:element>
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:copy>
+					<xsl:apply-templates select="@* | node()[1]"/>
+				</xsl:copy>
+			</xsl:otherwise>
+		</xsl:choose>
 		<xsl:apply-templates select="following-sibling::node()[1]"/>
 	</xsl:template>
 	
@@ -102,9 +116,9 @@
 					</xsl:if>
 				</xsl:when>
 				<xsl:when test="contains($block, concat('*', name(), '*'))">
-					<xsl:element name="{local-name()}">
+					<xsl:copy>
 						<xsl:apply-templates select="@* | node()[1]"/>
-					</xsl:element>
+					</xsl:copy>
 				</xsl:when>
 				<xsl:when
 					test="not(preceding-sibling::node()[not(self::comment() or self::processing-instruction())][1][self::text() or contains($inlineWithImage, concat('*', name(), '*'))])">
@@ -170,9 +184,9 @@
 		name="nextInline">
 		<xsl:choose>
 			<xsl:when test="self::*">
-				<xsl:element name="{local-name()}">
+				<xsl:copy>
 					<xsl:apply-templates select="@* | node()[1]"/>
-				</xsl:element>
+				</xsl:copy>
 			</xsl:when>
 			<xsl:when test="self::text()">
 				<xsl:choose>
@@ -228,9 +242,9 @@
 		name="nextInlineInP" mode="nextInlineInP">
 		<xsl:choose>
 			<xsl:when test="self::*">
-				<xsl:element name="{local-name()}">
+				<xsl:copy>
 					<xsl:apply-templates select="@* | node()[1]"/>
-				</xsl:element>
+				</xsl:copy>
 			</xsl:when>
 			<xsl:when test="self::text()">
 				<xsl:choose>

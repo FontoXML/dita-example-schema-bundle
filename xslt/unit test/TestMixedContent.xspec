@@ -81,12 +81,28 @@
 			<note><image href="test.png"/><p>A paragraph</p></note>
 		</x:expect>
 	</x:scenario>
+	<x:scenario label="When there is an mathml element outside the p">
+		<x:context>
+			<note><mathml><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mn>25</mml:mn></mml:math></mathml><p>A paragraph</p></note>
+		</x:context>
+		<x:expect label="Only the namespace should be fixed">
+			<note><mathml><mathml:math xmlns:mathml="http://www.w3.org/1998/Math/MathML"><mathml:mn>25</mathml:mn></mathml:math></mathml><p>A paragraph</p></note>
+		</x:expect>
+	</x:scenario>
 	<x:scenario label="When there is an image and text outside the p">
 		<x:context>
 			<note><image href="test.png"/>A paragraph</note>
 		</x:context>
 		<x:expect label="The text should be wrapped">
 			<note><image href="test.png"/><p>A paragraph</p></note>
+		</x:expect>
+	</x:scenario>
+	<x:scenario label="When there is an mathml element and text outside the p">
+		<x:context>
+			<note><mathml><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mn>25</mml:mn></mml:math></mathml>A paragraph</note>
+		</x:context>
+		<x:expect label="The text should be wrapped">
+			<note><mathml><mathml:math xmlns:mathml="http://www.w3.org/1998/Math/MathML"><mathml:mn>25</mathml:mn></mathml:math></mathml><p>A paragraph</p></note>
 		</x:expect>
 	</x:scenario>
 	<x:scenario label="When there is an note and image and text in the p">
@@ -121,6 +137,14 @@
 		</x:context>
 		<x:expect label="Nothing should happen">
 			<note><p>tekst</p><image href="test.png"/><p><b>bold</b> tekst</p></note>
+		</x:expect>
+	</x:scenario>
+	<x:scenario label="When there is an mathml element and text in the note">
+		<x:context>
+			<note>tekst<mathml><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mn>25</mml:mn></mml:math></mathml><b>bold</b> tekst</note>
+		</x:context>
+		<x:expect label="Only the text should be wrapped">
+			<note><p>tekst</p><mathml><mathml:math xmlns:mathml="http://www.w3.org/1998/Math/MathML"><mathml:mn>25</mathml:mn></mathml:math></mathml><p><b>bold</b> tekst</p></note>
 		</x:expect>
 	</x:scenario>
 	<x:scenario label="leading and trailing spaces in sli">
@@ -219,6 +243,24 @@ text</lines>
 			</body>
 		</x:expect>
 	</x:scenario>
+	<x:scenario label="mathml element is the only element in a paragraph">
+		<x:context>
+			<body>
+				<p><!-- comment --><mathml><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mn>25</mml:mn></mml:math></mathml></p>
+				<p>
+					<mathml><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mn>25</mml:mn></mml:math></mathml>
+				</p>
+				<p><mathml><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mn>25</mml:mn></mml:math></mathml>stays an paragraph</p>
+			</body>
+		</x:context>
+		<x:expect label="Nothing happens">
+			<body>
+				<p><!-- comment --><mathml><mathml:math xmlns:mathml="http://www.w3.org/1998/Math/MathML"><mathml:mn>25</mathml:mn></mathml:math></mathml></p>
+				<p><mathml><mathml:math xmlns:mathml="http://www.w3.org/1998/Math/MathML"><mathml:mn>25</mathml:mn></mathml:math></mathml></p>
+				<p><mathml><mathml:math xmlns:mathml="http://www.w3.org/1998/Math/MathML"><mathml:mn>25</mathml:mn></mathml:math></mathml>stays an paragraph</p>
+			</body>
+		</x:expect>
+	</x:scenario>
 	<x:scenario label="image is the only element in a paragraph">
 		<x:context>
 			<body>
@@ -234,6 +276,24 @@ text</lines>
 				<image href="test.png"/>
 				<note><p>a note</p></note>
 				<!-- comment --><image href="test.png"/>
+			</body>
+		</x:expect>
+	</x:scenario>
+	<x:scenario label="mathml is the only element in a paragraph">
+		<x:context>
+			<body>
+				<p>
+					<mathml><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mn>25</mml:mn></mml:math></mathml>
+					<note>a note</note>
+					<!-- comment --><mathml><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mn>25</mml:mn></mml:math></mathml>
+				</p>
+			</body>
+		</x:context>
+		<x:expect label="The paragraph is unwrapped and the mathml elements are wrapped">
+			<body>
+				<p><mathml><mathml:math xmlns:mathml="http://www.w3.org/1998/Math/MathML"><mathml:mn>25</mathml:mn></mathml:math></mathml></p>
+				<note><p>a note</p></note>
+				<!-- comment --><p><mathml><mathml:math xmlns:mathml="http://www.w3.org/1998/Math/MathML"><mathml:mn>25</mathml:mn></mathml:math></mathml></p>
 			</body>
 		</x:expect>
 	</x:scenario>
