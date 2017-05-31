@@ -4,6 +4,10 @@
 		<x:context href="inputFuleFileTest.xml"/>
 		<x:expect label="wrap in p and nodes before the rootelement are created correctly" href="outputFuleFileTest.xml"/>
 	</x:scenario>
+	<x:scenario label="Full file test 2">
+		<x:context href="inputFuleFileTest2.xml"/>
+		<x:expect label="wrap in p and nodes before the rootelement are created correctly" href="outputFuleFileTest2.xml"/>
+	</x:scenario>
 	<x:scenario label="Text, inline elements and block level elements are mixed">
 		<x:context>
 			<body>

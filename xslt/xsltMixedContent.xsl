@@ -111,7 +111,7 @@
 			<xsl:choose>
 				<xsl:when test="not(self::*) and not(self::text())">
 					<xsl:if
-						test="not(preceding-sibling::node()[not(self::comment() or self::processing-instruction())][1][self::text() or contains($inlineWithImage, concat('*', name(), '*'))]) or (preceding-sibling::node()[not(self::comment() or self::processing-instruction())][1][self::text() or contains($inlineWithImage, concat('*', name(), '*'))] and not(following-sibling::node()[not(self::comment() or self::processing-instruction())][1][self::text() or contains($inlineWithImage, concat('*', name(), '*'))]))">
+						test="not(preceding-sibling::node()[not(self::comment() or self::processing-instruction())][1][(self::text() and normalize-space(.)!='') or contains($inlineWithImage, concat('*', name(), '*'))]) or (preceding-sibling::node()[not(self::comment() or self::processing-instruction())][1][(self::text() and normalize-space(.)!='') or contains($inlineWithImage, concat('*', name(), '*'))] and not(following-sibling::node()[not(self::comment() or self::processing-instruction())][1][(self::text() and normalize-space(.)!='') or contains($inlineWithImage, concat('*', name(), '*'))]))">
 						<xsl:copy/>
 					</xsl:if>
 				</xsl:when>
@@ -121,7 +121,7 @@
 					</xsl:copy>
 				</xsl:when>
 				<xsl:when
-					test="not(preceding-sibling::node()[not(self::comment() or self::processing-instruction())][1][self::text() or contains($inlineWithImage, concat('*', name(), '*'))])">
+					test="not(preceding-sibling::node()[not(self::comment() or self::processing-instruction())][1][(self::text() and normalize-space(.)!='') or contains($inlineWithImage, concat('*', name(), '*'))])">
 					<xsl:if test="not(self::text()) or (self::text() and normalize-space(.)!='')">
 						<xsl:variable name="paragraph">
 							<p>
@@ -238,7 +238,7 @@
 	</xsl:template>
 	
 	<xsl:template
-		match="*[contains($inlineContaining, concat('*', name(), '*'))]/text()[preceding-sibling::node()[not(self::comment() or self::processing-instruction())][1][self::text() or contains($inlineWithImage, concat('*', name(), '*'))]] | *[contains($inlineContaining, concat('*', name(), '*'))]/*[contains($inlineWithImage, concat('*', name(), '*'))][preceding-sibling::node()[not(self::comment() or self::processing-instruction())][1][self::text() or contains($inlineWithImage, concat('*', name(), '*'))]] | p[*[contains($block, concat('*', name(), '*'))]]/text()[preceding-sibling::node()[not(self::comment() or self::processing-instruction())][1][self::text() or contains($inlineWithImage, concat('*', name(), '*'))]] | p[*[contains($block, concat('*', name(), '*'))]]/*[contains($inlineWithImage, concat('*', name(), '*'))][preceding-sibling::node()[not(self::comment() or self::processing-instruction())][1][self::text() or contains($inlineWithImage, concat('*', name(), '*'))]]"
+		match="*[contains($inlineContaining, concat('*', name(), '*'))]/text()[preceding-sibling::node()[not(self::comment() or self::processing-instruction())][1][(self::text() and normalize-space(.)!='') or contains($inlineWithImage, concat('*', name(), '*'))]] | *[contains($inlineContaining, concat('*', name(), '*'))]/*[contains($inlineWithImage, concat('*', name(), '*'))][preceding-sibling::node()[not(self::comment() or self::processing-instruction())][1][(self::text() and normalize-space(.)!='') or contains($inlineWithImage, concat('*', name(), '*'))]] | p[*[contains($block, concat('*', name(), '*'))]]/text()[preceding-sibling::node()[not(self::comment() or self::processing-instruction())][1][(self::text() and normalize-space(.)!='') or contains($inlineWithImage, concat('*', name(), '*'))]] | p[*[contains($block, concat('*', name(), '*'))]]/*[contains($inlineWithImage, concat('*', name(), '*'))][preceding-sibling::node()[not(self::comment() or self::processing-instruction())][1][(self::text() and normalize-space(.)!='') or contains($inlineWithImage, concat('*', name(), '*'))]]"
 		name="nextInlineInP" mode="nextInlineInP">
 		<xsl:choose>
 			<xsl:when test="self::*">
@@ -285,7 +285,7 @@
 			</xsl:otherwise>
 		</xsl:choose>
 		<xsl:if
-			test="following-sibling::node()[1][self::comment() or self::processing-instruction()][following-sibling::node()[not(self::comment() or self::processing-instruction())][1][self::text() or contains($inlineWithImage, concat('*', name(), '*'))]]">
+			test="following-sibling::node()[1][self::comment() or self::processing-instruction()][following-sibling::node()[not(self::comment() or self::processing-instruction())][1][(self::text() and normalize-space(.)!='') or contains($inlineWithImage, concat('*', name(), '*'))]]">
 			<xsl:apply-templates
 				select="following-sibling::node()[1][self::comment() or self::processing-instruction()]"
 				mode="commentProcessing-instruction"/>

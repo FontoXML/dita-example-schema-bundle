@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<topic id="a" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:fontoxml:names:tc:dita:xsd:topic.xsd:1.3">
+	<title>Full file test 2</title>
+	<body>
+		<section>
+			<p><mathml><mathml:math xmlns:mathml="http://www.w3.org/1998/Math/MathML"><mathml:mn>25</mathml:mn></mathml:math></mathml></p>
+			<note><p>a note</p></note>
+			<!-- comment --><p><mathml><mathml:math xmlns:mathml="http://www.w3.org/1998/Math/MathML"><mathml:mn>25</mathml:mn></mathml:math></mathml></p>
+		</section>
+		<section>
+			<image href="test.png"/>
+			<note><p>a note</p></note>
+			<!-- comment --><image href="test.png"/><!-- comment -->
+		</section>
+		<section>
+			<p>leading and trailing space</p>
+			<note>
+				<p>a paragraph</p>
+			</note>
+			<p><b>leading space</b> and trailing space</p>
+		</section>
+	</body>
+</topic>
