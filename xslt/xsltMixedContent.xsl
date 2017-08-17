@@ -22,13 +22,13 @@
 	<xsl:variable name="block"
 		select="'*dl* *div* *fig* *lines* *lq* *note* *object* *ol* *pre* *simpletable* *sl* *table* *ul* *parml* *equation-block* *lcTrueFalse2* *lcSingleSelect2* *lcMultipleSelect2* *lcSequencing2* *lcMatching2* *lcHotspot2* *lcOpenQuestion2* *lcInteractionBase2* *imagemap* *syntaxdiagram* *equation-figure* *lcTrueFalse* *lcSingleSelect* *lcMultipleSelect* *lcSequencing* *lcMatching* *lcHotspot* *lcOpenQuestion* *lcInteractionBase* *hazardstatement* *lcInstructornote* *lcInstructornote2* *codeblock* *msgblock* *screen*'"/> <!-- image -->
 	
-	<xsl:template match="/">
+	<xsl:template match="/" priority="1">
 		<xsl:copy>
 			<xsl:apply-templates select="node()[1]"/>
 		</xsl:copy>
 	</xsl:template>
 	
-	<xsl:template match="*">
+	<xsl:template match="*" priority="2">
 		<xsl:choose>
 			<xsl:when test="namespace-uri() = 'http://www.w3.org/1998/Math/MathML'">
 				<xsl:element name="mathml:{local-name()}">
@@ -49,7 +49,7 @@
 		<xsl:apply-templates select="following-sibling::node()[1]"/>
 	</xsl:template>
 	
-	<xsl:template match="@*">
+	<xsl:template match="@*" priority="3">
 		<xsl:if
 			test="name()[not(contains(., 'ditaarch'))] and name() != 'class' and name() != 'domains'">
 			<xsl:copy/>
@@ -57,7 +57,7 @@
 	</xsl:template>
 	
 	<!-- By default collapse to consecutive whitespace characters to a single space -->
-	<xsl:template match="text()">
+	<xsl:template match="text()" priority="4">
 		<xsl:choose>
 			<xsl:when test="ancestor::pre or ancestor::msgblock or ancestor::codeblock or ancestor::screen">
 				<xsl:copy/>
@@ -96,17 +96,17 @@
 		<xsl:apply-templates select="following-sibling::node()[1]"/>
 	</xsl:template>
 	
-	<xsl:template match="comment() | processing-instruction()">
+	<xsl:template match="comment() | processing-instruction()" priority="5">
 		<xsl:copy/>
 		<xsl:apply-templates select="following-sibling::node()[1]"/>
 	</xsl:template>
 	
-	<xsl:template match="p[not(child::*[not(self::image)]) and count(child::image)=1 and not(child::text()[normalize-space(.)!=''])]">
+	<xsl:template match="p[not(child::*[not(self::image)]) and count(child::image)=1 and not(child::text()[normalize-space(.)!=''])]" priority="6">
 		<xsl:apply-templates select="node()[1]"/>
 		<xsl:apply-templates select="following-sibling::node()[1]"/>
 	</xsl:template>
 	
-	<xsl:template match="p[*[contains($block, concat('*', name(), '*'))]]">
+	<xsl:template match="p[*[contains($block, concat('*', name(), '*'))]]" priority="7">
 		<xsl:for-each select="child::node()">
 			<xsl:choose>
 				<xsl:when test="not(self::*) and not(self::text())">
@@ -143,10 +143,11 @@
 		<xsl:apply-templates select="following-sibling::node()[1]"/>
 	</xsl:template>
 	
-	<xsl:template match="*[contains($block, concat('*', name(), '*'))][parent::p]"/>
+	<xsl:template match="*[contains($block, concat('*', name(), '*'))][parent::p]" priority="8"/>
 	
 	<xsl:template
-		match="*[contains($inlineContaining, concat('*', name(), '*'))]/*[contains($inline, concat('*', name(), '*'))] | *[contains($inlineContaining, concat('*', name(), '*'))]/text()">
+		match="*[contains($inlineContaining, concat('*', name(), '*'))]/*[contains($inline, concat('*', name(), '*'))] | *[contains($inlineContaining, concat('*', name(), '*'))]/text()"
+		priority="9">
 		<xsl:variable name="paragraph">
 			<p>
 				<xsl:call-template name="nextInline"/>
@@ -181,7 +182,8 @@
 	
 	<xsl:template
 		match="*[contains($inlineContaining, concat('*', name(), '*'))]/text()[preceding-sibling::node()[not(self::comment() or self::processing-instruction())][1][self::text() or contains($inline, concat('*', name(), '*'))]] | *[contains($inlineContaining, concat('*', name(), '*'))]/*[contains($inline, concat('*', name(), '*'))][preceding-sibling::node()[not(self::comment() or self::processing-instruction())][1][self::text() or contains($inline, concat('*', name(), '*'))]] | p[*[contains($block, concat('*', name(), '*'))]]/text()[preceding-sibling::node()[not(self::comment() or self::processing-instruction())][1][self::text() or contains($inline, concat('*', name(), '*'))]] | p[*[contains($block, concat('*', name(), '*'))]]/*[contains($inline, concat('*', name(), '*'))][preceding-sibling::node()[not(self::comment() or self::processing-instruction())][1][self::text() or contains($inline, concat('*', name(), '*'))]]"
-		name="nextInline">
+		name="nextInline"
+		priority="10">
 		<xsl:choose>
 			<xsl:when test="self::*">
 				<xsl:copy>
