@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin id="com.fontoxml.dita.v1_3.schema.bundle">
+	<feature extension="dita.specialization.catalog.relative" file="catalog.xml"/>
+</plugin>
